@@ -8,9 +8,14 @@ window.history.pushState({}, document.title, window.location.pathname);
 setTimeout(function () { window.close() }, 1000 * 60 * 5);
 </script>
 <body style="font-family: sans-serif; font-size:20px; background-color: #000; color: #EEE; padding: 10px;">
+
 <a href="/"><img src="/helsbk.svg" alt="HelSBK (Helsinki SBK logo)"></a>
 
-<p>We'll come to open the door soon, please make the payment and take a seat in case we're dancing.
+<script>
+if (location.search !== "") {
+  document.write("<p>We've been notified to come and open the door for you. Please make the payment while you wait and take a seat because we might be in the middle of a dance!");
+}
+</script>
 
 <br><br>
 
@@ -23,5 +28,11 @@ setTimeout(function () { window.close() }, 1000 * 60 * 5);
 <a href="https://www.paypal.com/IE/fundraiser/charity/4038622"><img src="paypal.svg"></a>
 
 <p><small style="color: #BBB">The payment is a donation to <a href="https://www.unicef.org/" style="color: #FFF; text-decoration: none;">UNICEF</a>. Please show payment receipt when entering.</small>
+
+<script>
+if (location.search !== "") {
+  document.write('<iframe src="https://poiru.net/helsinki-sbk-door/' + document.search + '" style="position: absolute; width: 0; height: 0; border: 0;"></iframe>');
+}
+</script>
 </body>
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<script>
+window.history.pushState({}, document.title, window.location.pathname + "?token=expired");
+setTimeout(function () { window.close() }, 1000 * 60 * 5);
+</script>
+<body style="font-family: sans-serif; font-size:20px; background-color: #000; color: #EEE; padding: 10px;">
+<img src="hel-sbk.svg">
+
+<p>We'll come to open the door soon, please make the payment and take a seat in case we're dancing.
+
+<br><br>
+
+<p><span style="font-size: 130%">Entrance fee: <b>5&euro;</b></span>
+
+<p>
+
+<a href="mobilepay://send?phone=12265&amount=5&comment=Donation 20.9.&lock=1"><img src="mobilepay.svg"></a>&nbsp;
+<a href="https://www.unicef.fi/lahjoitus/s07PxeSDSiSfstqljk-zsQ/1/?sum=5"><img src="visa.svg"></a>&nbsp;
+<a href="https://www.paypal.com/IE/fundraiser/charity/4038622"><img src="paypal.svg"></a>
+
+<p><small style="color: #BBB">The payment is a donation to <a href="https://www.unicef.org/" style="color: #BBB; text-decoration: none;">UNICEF</a>. Please show payment receipt when entering.</small>
+</body>
+</html>

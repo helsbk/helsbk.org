@@ -8,12 +8,6 @@
 
 <a href="/"><img src="/helsbk.svg" alt="HelSBK (Helsinki SBK logo)"></a>
 
-<script>
-if (location.search !== '') {
-  document.write("<p>We've been notified to come and open the door for you. Please make the payment while you wait and take a seat because we might be in the middle of a dance!");
-}
-</script>
-
 <br><br>
 
 <p><span style="font-size: 130%">Entrance fee: <b>5&euro;</b></span>
@@ -28,14 +22,6 @@ if (location.search !== '') {
 </div>
 
 <script>
-if (location.search !== '') {
-  document.write('<iframe src="https://poiru.net/helsinki-sbk-door/' + location.search + '" style="position: absolute; width: 0; height: 0; border: 0;"></iframe>');
-}
-
-window.addEventListener('load', function () {
-  history.replaceState({}, document.title, location.pathname);
-});
-
 document.addEventListener('visibilitychange', () => {
   if (document.visibilityState === 'hidden') {
     document.getElementById('payment').style.display = 'none';

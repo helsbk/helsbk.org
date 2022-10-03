@@ -29,10 +29,16 @@
 }
 
 .dance-styles > * {
-  margin: 0px 4px;
+  display: inline-block;
+  margin: 4px 4px;
   padding: 4px 10px;
   border-radius: 10px;
   font-size: 80%;
+  white-space: nowrap;
+}
+
+.dance-styles:last-child {
+  margin-bottom: 0px;
 }
 
 .dance-styles .bachata {
@@ -48,20 +54,25 @@
 }
 
 .dance-styles .mixed {
+  background: linear-gradient(90deg, #6c650c, #366108, #80490d);
+}
+
+.dance-styles .other {
   background-color: #888;
 }
+
 </style>
 </head>
 <body style="font-family: sans-serif; font-size:20px; background-color: #000; color: #EEE; padding: 10px; max-width: 600px; margin-left: auto; margin-right: auto;">
 
-<p><span style="font-size: 130%">Social Dance Events in Helsinki</span></p>
+<p><span style="font-size: 120%">Socials in Helsinki</span></p>
 
 <a href="https://www.facebook.com/events/449412703904793" target="_blank" class="event-container">
   <div class="event-title"><b>Friday 7.10.</b> Social</div>
   <div class="event-location">by <span class="event-organizer">Avec Dance Club</span> in Vallila (8€)</div>
   <div class="dance-styles">
-    <span class="mixed">SBK room</span>
-    <span class="mixed">WCS room</span>
+    <div class="mixed">SBK room</div>
+    <div class="other">WCS room</div>
   </div>
 </a>
 
@@ -69,8 +80,8 @@
   <div class="event-title"><b>Friday 7.10.</b> Social</div>
   <div class="event-location">by <span class="event-organizer">Azembora</span> in Sörnäinen (10€)</div>
   <div class="dance-styles">
-    <span class="kizomba">Kizomba room</span>
-    <span class="kizomba">Urbankiz room</span>
+    <div class="kizomba">Kizomba room</div>
+    <div class="kizomba">Urbankiz room</div>
   </div>
 </a>
 
@@ -78,9 +89,7 @@
   <div class="event-title"><b>Friday 7.10.</b> Social</div>
   <div class="event-location">by <span class="event-organizer">Bachata Helsinki</span> in Sörnäinen (5€)</div>
   <div class="dance-styles">
-    <span class="bachata">60% Bachata</span>
-    <span class="kizomba">20% Kizomba</span>
-    <span class="salsa">20% Salsa</span>
+    <div class="mixed">SBK, mostly bachata</div>
   </div>
 </a>
 
@@ -88,7 +97,7 @@
   <div class="event-title"><b>Friday 7.10.</b> Social</div>
   <div class="event-location">by <span class="event-organizer">Still Dancing</span> in Salmisaari (10€ - 15€)</div>
   <div class="dance-styles">
-    <span class="salsa">100% Mambo</span>
+    <div class="salsa">Mambo</div>
   </div>
 </a>
 
@@ -96,9 +105,7 @@
   <div class="event-title"><b>Saturday 8.10.</b> Social</div>
   <div class="event-location">by <span class="event-organizer">Helsinki SBK</span> in Salmisaari (5€ - 8€)</div>
   <div class="dance-styles">
-    <span class="bachata">80% Bachata</span>
-    <span class="kizomba">10% Kizomba</span>
-    <span class="salsa">10% Salsa</span>
+    <div class="mixed">SBK, mostly bachata</div>
   </div>
 </a>
 
@@ -106,9 +113,11 @@
   <div class="event-title"><b>Sunday 9.10.</b> Social</div>
   <div class="event-location">by <span class="event-organizer">Still Dancing</span> in Salmisaari (7€)</div>
   <div class="dance-styles">
-    <span class="salsa">100% Mambo</span>
+    <div class="mixed">Salsa/bachata</div>
   </div>
 </a>
+
+<br><br>
 
 <p><small style="color: #BBB">Helsinki SBK does not organize most of these events. Please be in contact with event organizer directly. Listed prices are for walk-in tickets at the door for just the social (excluding possible pre-party classes).</small>
 

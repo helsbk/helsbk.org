@@ -28,11 +28,11 @@ function handleDiscountClick() {
   const feeText = document.getElementById('fee');
 
   if (discountCheckbox.checked) {
-    mobilepayLink.href = mobilepayLink.href.replace('amount=7', 'amount=6');
-    feeText.innerText = feeText.innerText.replace('7', '6');
+    mobilepayLink.href = mobilepayLink.href.replace('amount=10', 'amount=9');
+    feeText.innerText = feeText.innerText.replace('10', '9');
   } else {
-    mobilepayLink.href = mobilepayLink.href.replace('amount=6', 'amount=7');
-    feeText.innerText = feeText.innerText.replace('6', '7');
+    mobilepayLink.href = mobilepayLink.href.replace('amount=9', 'amount=10');
+    feeText.innerText = feeText.innerText.replace('9', '10');
   }
 }
 </script>
@@ -43,7 +43,7 @@ function handleDiscountClick() {
 
 <br><br>
 
-<p><span style="font-size: 130%">Entrance fee: <b id="fee">7&euro;</b></span>
+<p><span style="font-size: 130%">Entrance fee: <b id="fee">10&euro;</b></span>
 
 <p>If you put <span style="white-space: nowrap;"><img src="fb-check.svg" height="16px" /> Going (Osallistun)</span> in the <a href="https://www.facebook.com/events/856696612133588" target="_blank">Facebook event</a>, we'll give you a 1€ discount when paying with MobilePay:
 
@@ -54,9 +54,9 @@ function handleDiscountClick() {
 
 <div id="payment">
   <p>
-  <a href="mobilepay://send?phone=0402403791&amount=7&comment=4.11. Social&lock=1" id="mobilepay-link"><img src="mobilepay.svg"></a>&nbsp;
+  <a href="mobilepay://send?phone=0402403791&amount=10&comment=4.11. Social&lock=1" id="mobilepay-link"><img src="mobilepay.svg"></a>&nbsp;
   <a href="https://store.hbry.fi/product/friday-4-11-social" target="_blank"><img src="visa.svg"></a>&nbsp;
-  <a href="https://www.paypal.me/helsinkibachateando/7" target="_blank"><img src="paypal.svg"></a>
+  <a href="https://www.paypal.me/helsinkibachateando/10" target="_blank"><img src="paypal.svg"></a>
 
   <p style="color: #BBB; font-size: 80%;">The payment is for <a href="https://hbry.fi" style="color: #FFF;">Helsinki Bachateando ry</a>, a non-profit bachata association. Please show payment receipt when entering.
 </div>

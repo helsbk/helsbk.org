@@ -13,25 +13,12 @@ body {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 a {
   color: #559bdb;
   text-decoration: none;
-}
-
-.fb-check {
-   background: url('fb-check.svg') no-repeat left center;
-   background-size: 18px;
-   background-position: 4px 2px;
-   padding: 4px;
-   padding-bottom: 2px;
-   padding-left: 28px;
-   border: 1px solid white;
-   border-radius: 8px;
-   font-size: 16px;
-   white-space: nowrap;
 }
 </style>
 <script type="text/javascript">
@@ -54,9 +41,9 @@ function handleDiscountClick() {
 
 <a href="/"><img src="/helsbk.svg" alt="HelSBK (Helsinki SBK logo)"></a>
 
-<br><br>
+<br>
 
-<p>If you help us advertise our events by marking yourself as <span class="fb-check">Going / Osallistun</span> in the <a href="https://www.facebook.com/events/856696612133588" target="_blank">Facebook event</a>, we'll give you a 1€ discount with MobilePay. Just confirm that you've done it:
+<p>If you put <span style="white-space: nowrap;"><img src="fb-check.svg" height="16px" /> Going (Osallistun)</span> in the <a href="https://www.facebook.com/events/856696612133588" target="_blank">Facebook event</a>, we'll give you a 1€ discount when paying with MobilePay:
 
 <div>
   <input type="checkbox" id="discount" name="discount" onclick="handleDiscountClick()">

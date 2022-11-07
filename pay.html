@@ -21,6 +21,13 @@ a {
   text-decoration: none;
 }
 </style>
+<script type="text/javascript">
+function handlePayPalClick() {
+  if (confirm('Please select "payment for friends and family" instead of "products and services" when you get to the PayPal payment page. OK?')) {
+    window.open('https://www.paypal.me/helsinkibachateando/4', '_blank');
+  }
+}
+</script>
 </head>
 <body>
 
@@ -32,9 +39,9 @@ a {
 
 <div id="payment">
   <p>
-  <a href="mobilepay://send?phone=0402403791&amount=10&comment=4.11. Social&lock=1"><img src="mobilepay.svg"></a>&nbsp;
-  <a href="https://store.hbry.fi/product/friday-4-11-social" target="_blank"><img src="visa.svg"></a>&nbsp;
-  <a href="https://www.paypal.me/helsinkibachateando/10" target="_blank"><img src="paypal.svg"></a>
+  <a href="mobilepay://send?phone=0402403791&amount=4&comment=8.11. Social&lock=1"><img src="mobilepay.svg"></a>&nbsp;
+  <a href="https://store.hbry.fi/product/tuesday-8-11-social" target="_blank"><img src="visa.svg"></a>&nbsp;
+  <a onclick="handlePayPalClick()"><img src="paypal.svg"></a>
 
   <p style="color: #BBB; font-size: 80%;">The payment is for <a href="https://hbry.fi" style="color: #FFF;">Helsinki Bachateando ry</a>, a non-profit bachata association. Please show payment receipt when entering.
 </div>

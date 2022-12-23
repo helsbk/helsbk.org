@@ -20,11 +20,38 @@ a {
   color: #559bdb;
   text-decoration: none;
 }
+
+.payment {
+  display: none;
+}
 </style>
 <script type="text/javascript">
-function handlePayPalClick() {
+function handlePayPalClick(sum) {
   if (confirm('Please select "payment for friends and family" instead of "products and services" when you get to the PayPal payment page. OK?')) {
-    window.open('https://www.paypal.me/helsinkibachateando/5', '_blank');
+    window.open('https://www.paypal.me/helsinkibachateando/' + sum, '_blank');
+  }
+}
+
+function handleRoomSelection() {
+  const radioBachata = document.getElementById('bachata');
+  const paymentBachata = document.getElementById('payment-bachata');
+
+  const radioKizomba = document.getElementById('kizomba');
+  const paymentKizomba = document.getElementById('payment-kizomba');
+
+  const radioBoth = document.getElementById('both');
+  const paymentBoth = document.getElementById('payment-both');
+
+  paymentBachata.style.display = 'none';
+  paymentKizomba.style.display = 'none';
+  paymentBoth.style.display = 'none';
+
+  if (radioBachata.checked) {
+    paymentBachata.style.display = 'block';
+  } else if (radioKizomba.checked) {
+    paymentKizomba.style.display = 'block';
+  } else if (radioBoth.checked) {
+    paymentBoth.style.display = 'block';
   }
 }
 </script>
@@ -35,15 +62,52 @@ function handlePayPalClick() {
 
 <br><br>
 
-<p><span style="font-size: 130%">Entrance fee: <b>5&euro;</b></span>
+<fieldset>
+  <legend>Which rooms will you dance in?</legend>
 
-<div id="payment">
+  <div>
+    <input type="radio" id="bachata" name="room" value="bachata" onchange="handleRoomSelection()">
+    <label for="bachata">Bachata only</label>
+  </div>
+
+  <div>
+    <input type="radio" id="kizomba" name="room" value="kizomba" onchange="handleRoomSelection()">
+    <label for="kizomba">Kizomba only</label>
+  </div>
+
+  <div>
+    <input type="radio" id="both" name="room" value="both" onchange="handleRoomSelection()">
+    <label for="both">Bachata and Kizomba</label>
+  </div>
+</fieldset>
+
+<div id="payment-bachata" class="payment">
+  <p><span style="font-size: 130%">Entrance fee: <b>5&euro;</b></span>
+
   <p>
   <a href="mobilepay://send?phone=0402403791&amount=5&comment=Social&lock=1"><img src="mobilepay.svg"></a>&nbsp;
-  <a href="https://store.hbry.fi/product/social-dance-entrance-ticket" target="_blank"><img src="visa.svg"></a>&nbsp;
-  <a onclick="handlePayPalClick()"><img src="paypal.svg"></a>
-
-  <p style="color: #BBB; font-size: 80%;">The payment is for <a href="https://hbry.fi" style="color: #FFF;">Helsinki Bachateando ry</a>, a non-profit bachata association. Please show payment receipt when entering.
+  <a href="https://store.hbry.fi/product/social-dance-ticket-bachata-room" target="_blank"><img src="visa.svg"></a>&nbsp;
+  <a onclick="handlePayPalClick(5)"><img src="paypal.svg"></a>
 </div>
+
+<div id="payment-kizomba" class="payment">
+  <p><span style="font-size: 130%">Entrance fee: <b>7&euro;</b></span>
+
+  <p>
+  <a href="mobilepay://send?phone=0402403791&amount=7&comment=Social&lock=1"><img src="mobilepay.svg"></a>&nbsp;
+  <a href="https://store.hbry.fi/product/social-dance-ticket-kizomba-room" target="_blank"><img src="visa.svg"></a>&nbsp;
+  <a onclick="handlePayPalClick(7)"><img src="paypal.svg"></a>
+</div>
+
+<div id="payment-both" class="payment">
+  <p><span style="font-size: 130%">Entrance fee: <b>9&euro;</b></span>
+
+  <p>
+  <a href="mobilepay://send?phone=0402403791&amount=9&comment=Social&lock=1"><img src="mobilepay.svg"></a>&nbsp;
+  <a href="https://store.hbry.fi/product/social-dance-ticket-all-rooms" target="_blank"><img src="visa.svg"></a>&nbsp;
+  <a onclick="handlePayPalClick(9)"><img src="paypal.svg"></a>
+</div>
+
+<p style="color: #BBB; font-size: 80%;">The payment is for <a href="https://hbry.fi" style="color: #FFF;">Helsinki Bachateando ry</a>, a non-profit bachata association. Please show payment receipt when entering.
 </body>
 </html>

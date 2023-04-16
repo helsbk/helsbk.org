@@ -33,22 +33,16 @@ function handlePayPalClick(sum) {
 }
 
 function handleRoomSelection() {
-  const radioBachata = document.getElementById('bachata');
-  const paymentBachata = document.getElementById('payment-bachata');
-
   const radioKizomba = document.getElementById('kizomba');
   const paymentKizomba = document.getElementById('payment-kizomba');
 
   const radioBoth = document.getElementById('both');
   const paymentBoth = document.getElementById('payment-both');
 
-  paymentBachata.style.display = 'none';
   paymentKizomba.style.display = 'none';
   paymentBoth.style.display = 'none';
 
-  if (radioBachata.checked) {
-    paymentBachata.style.display = 'block';
-  } else if (radioKizomba.checked) {
+  if (radioKizomba.checked) {
     paymentKizomba.style.display = 'block';
   } else if (radioBoth.checked) {
     paymentBoth.style.display = 'block';

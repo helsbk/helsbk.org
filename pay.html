@@ -20,32 +20,11 @@ a {
   color: #559bdb;
   text-decoration: none;
 }
-
-.payment {
-  display: none;
-}
 </style>
 <script type="text/javascript">
-function handlePayPalClick(sum) {
+function handlePayPalClick() {
   if (confirm('Please select "payment for friends and family" instead of "products and services" when you get to the PayPal payment page. OK?')) {
-    window.open('https://www.paypal.me/helsinkibachateando/' + sum, '_blank');
-  }
-}
-
-function handleRoomSelection() {
-  const radioKizomba = document.getElementById('kizomba');
-  const paymentKizomba = document.getElementById('payment-kizomba');
-
-  const radioBoth = document.getElementById('both');
-  const paymentBoth = document.getElementById('payment-both');
-
-  paymentKizomba.style.display = 'none';
-  paymentBoth.style.display = 'none';
-
-  if (radioKizomba.checked) {
-    paymentKizomba.style.display = 'block';
-  } else if (radioBoth.checked) {
-    paymentBoth.style.display = 'block';
+    window.open('https://www.paypal.me/helsinkibachateando/5', '_blank');
   }
 }
 </script>
@@ -56,34 +35,15 @@ function handleRoomSelection() {
 
 <br><br>
 
-<fieldset>
-  <legend>Select ticket type</legend>
+<p><span style="font-size: 130%">Entrance fee: <b>5&euro;</b></span>
 
-  <div>
-    <input type="radio" id="kizomba" name="room" value="kizomba" onchange="handleRoomSelection()">
-    <label for="kizomba">Social only</label>
-  </div>
-
-  <div>
-    <input type="radio" id="both" name="room" value="both" onchange="handleRoomSelection()">
-    <label for="both">Class + Social</label>
-  </div>
-</fieldset>
-
-<div id="payment-kizomba" class="payment">
-  <p><span style="font-size: 130%">Entrance fee: <b>5&euro;</b></span>
-
+<div id="payment">
   <p>
-  <a href="mobilepay://send?phone=0402403791&amount=5&comment=Azembora%20Social&lock=1"><img src="mobilepay.svg"></a>&nbsp;
+  <a href="mobilepay://send?phone=0402403791&amount=5&comment=Social&lock=1"><img src="mobilepay.svg"></a>&nbsp;
+  <a href="https://store.hbry.fi/product/social-dance-entrance-ticket" target="_blank"><img src="visa.svg"></a>&nbsp;
+  <a onclick="handlePayPalClick()"><img src="paypal.svg"></a>
+
+  <p style="color: #BBB; font-size: 80%;">The payment is for <a href="https://hbry.fi" style="color: #FFF;">Helsinki Bachateando ry</a>, a non-profit bachata association. Please show payment receipt when entering.
 </div>
-
-<div id="payment-both" class="payment">
-  <p><span style="font-size: 130%">Entrance fee: <b>12&euro;</b></span>
-
-  <p>
-  <a href="mobilepay://send?phone=0402403791&amount=12&comment=Azembora%20Class+Social&lock=1"><img src="mobilepay.svg"></a>&nbsp;
-</div>
-
-<p style="color: #BBB; font-size: 80%;">The payment is for <a href="https://hbry.fi" style="color: #FFF;">Azembora</a>.
 </body>
 </html>

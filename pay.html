@@ -20,12 +20,68 @@ a {
   color: #559bdb;
   text-decoration: none;
 }
+
+fieldset div {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.hidden {
+  display: none;
+}
 </style>
 <script type="text/javascript">
-function handlePayPalClick() {
+function handlePayPalClick(sum) {
   if (confirm('Please select "payment for friends and family" instead of "products and services" when you get to the PayPal payment page. OK?')) {
-    window.open('https://www.paypal.me/helsinkibachateando/5', '_blank');
+    window.open('https://www.paypal.me/helsinkibachateando/' + sum, '_blank');
   }
+}
+
+function handleSelection() {
+  const radioBachata = document.getElementById('bachata');
+  const radioKizomba = document.getElementById('kizomba');
+  const radioBoth = document.getElementById('both');
+
+  const selectWorkshop = document.getElementById('select-workshop');
+  const workshopYes = document.getElementById('workshop-yes');
+  const workshopNo = document.getElementById('workshop-no');
+
+  const payment = document.getElementById('payment');
+
+  let amount = 0;
+  let sumupLink = '';
+
+  if (radioBachata.checked) {
+    amount = 8.95;
+    sumupLink = 'https://store.hbry.fi/product/entrance-ticket-bachata';
+  } else if (radioKizomba.checked) {
+    if (workshopYes.checked) {
+      amount = 14.99;
+      sumupLink = 'https://store.hbry.fi/product/entrance-ticket-urbankiz-workshop';
+    } else if (workshopNo.checked) {
+      amount = 8.99;
+      sumupLink = 'https://store.hbry.fi/product/entrance-ticket-urbankiz';
+    }
+  } else if (radioBoth.checked) {
+    if (workshopYes.checked) {
+      amount = 15;
+      sumupLink = 'https://store.hbry.fi/product/entrance-ticket-bachata-urbankiz-workshop';
+    } else if (workshopNo.checked) {
+      amount = 9;
+      sumupLink = 'https://store.hbry.fi/product/entrance-ticket-bachata-urbankiz';
+    }
+  }
+
+  payment.style.display = amount > 0 ? 'block' : 'none';
+  selectWorkshop.style.display = (radioKizomba.checked || radioBoth.checked) ? 'block' : 'none';
+
+  payment.innerHTML = `
+    <p><span style="font-size: 130%">Entrance fee: <b>${Math.round(amount)}&euro;</b></span>
+
+    <p>
+    <a href="mobilepay://send?phone=0402403791&amount=${amount}&comment=Social&lock=1"><img src="mobilepay.svg"></a>&nbsp;
+    <a href="${sumupLink}" target="_blank"><img src="visa.svg"></a>&nbsp;
+    <a onclick="handlePayPalClick(${amount})"><img src="paypal.svg"></a>`;
 }
 </script>
 </head>
@@ -35,15 +91,43 @@ function handlePayPalClick() {
 
 <br><br>
 
-<p><span style="font-size: 130%">Entrance fee: <b>5&euro;</b></span>
+<fieldset>
+  <legend><b>Which styles do you dance?</b></legend>
 
-<div id="payment">
-  <p>
-  <a href="mobilepay://send?phone=0402403791&amount=5&comment=Social&lock=1"><img src="mobilepay.svg"></a>&nbsp;
-  <a href="https://store.hbry.fi/product/social-dance-entrance-ticket" target="_blank"><img src="visa.svg"></a>&nbsp;
-  <a onclick="handlePayPalClick()"><img src="paypal.svg"></a>
+  <div>
+    <input type="radio" id="bachata" name="room" value="bachata" onchange="handleSelection()">
+    <label for="bachata">Bachata only</label>
+  </div>
 
-  <p style="color: #BBB; font-size: 80%;">The payment is for <a href="https://hbry.fi" style="color: #FFF;">Helsinki Bachateando ry</a>, a non-profit bachata association. Please show payment receipt when entering.
-</div>
+  <div>
+    <input type="radio" id="kizomba" name="room" value="kizomba" onchange="handleSelection()">
+    <label for="kizomba">Urbankiz only</label>
+  </div>
+
+  <div>
+    <input type="radio" id="both" name="room" value="both" onchange="handleSelection()">
+    <label for="both">Bachata and Urbankiz</label>
+  </div>
+</fieldset>
+
+<br>
+
+<fieldset id="select-workshop" class="hidden"s>
+  <legend><b>Urbankiz workshop?</b></legend>
+
+  <div>
+    <input type="radio" id="workshop-yes" name="workshop" value="yes" onchange="handleSelection()">
+    <label for="workshop-yes">Yes, I will or did attend</label>
+  </div>
+
+  <div>
+    <input type="radio" id="workshop-no" name="workshop" value="no" onchange="handleSelection()">
+    <label for="workshop-no">No</label>
+  </div>
+</fieldset>
+
+<div id="payment"></div>
+
+<p style="color: #BBB; font-size: 80%;">The payment is for <a href="https://hbry.fi" style="color: #FFF;">Helsinki Bachateando ry</a>, a non-profit bachata association.
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Summer Donation — Helsinki SBK</title>
+<title>Entrance payment — Helsinki SBK</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style type="text/css">
 body {
@@ -20,12 +20,35 @@ a {
   color: #559bdb;
   text-decoration: none;
 }
+
+fieldset div {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.hidden {
+  display: none;
+}
 </style>
 <script type="text/javascript">
-function handlePayPalClick() {
+function handlePayPalClick(sum) {
   if (confirm('Please select "payment for friends and family" instead of "products and services" when you get to the PayPal payment page. OK?')) {
-    window.open('https://www.paypal.me/helsinkibachateando/10', '_blank');
+    window.open('https://www.paypal.me/helsinkibachateando/' + sum, '_blank');
   }
+}
+
+function handleSelection() {
+  const donation5 = document.getElementById('donation-5');
+  const donation10 = document.getElementById('donation-10');
+  const donation20 = document.getElementById('donation-20');
+  const payment = document.getElementById('payment');
+
+  const amount = donation5.checked ? 5 : donation10.checked ? 10 : donation20.checked ? 20 : 0;
+  payment.style.display = amount > 0 ? 'block' : 'none';
+  payment.innerHTML = `
+    <p>
+    <a href="mobilepay://send?phone=0402403791&amount=${amount}&comment=Donation&lock=1"><img src="mobilepay.svg"></a>&nbsp;
+    <a onclick="handlePayPalClick(${amount})"><img src="paypal.svg"></a>`;
 }
 </script>
 </head>
@@ -35,15 +58,31 @@ function handlePayPalClick() {
 
 <br><br>
 
-<p><span style="font-size: 130%">Summer 2023 donation: <b>10&euro;</b></span>
+<p><span style="font-size: 130%">Summer 2023 donation</span>
 
-<div id="payment">
-  <p>
-  <a href="mobilepay://send?phone=0402403791&amount=10&comment=Summer%20Donation&lock=1"><img src="mobilepay.svg"></a>&nbsp;
-  <a href="https://store.hbry.fi/product/outdoor-bachata-donation-for-summer-2023" target="_blank"><img src="visa.svg"></a>&nbsp;
-  <a onclick="handlePayPalClick()"><img src="paypal.svg"></a>
+<p>Your donation will help us cover expenses like the music permit and sound equipment for our summer outdoor events. Thanks for your help!
 
-  <p style="color: #BBB; font-size: 80%;">The payment is for <a href="https://hbry.fi" style="color: #FFF;">Helsinki Bachateando ry</a>, a non-profit bachata association.
-</div>
+<fieldset>
+  <legend><b>Donation amount</b></legend>
+
+  <div>
+    <input type="radio" id="donation-5" name="amount" value="bachata" onchange="handleSelection()">
+    <label for="donation-5">5€</label>
+  </div>
+
+  <div>
+    <input type="radio" id="donation-10" name="amount" value="kizomba" onchange="handleSelection()">
+    <label for="donation-10">10€</label>
+  </div>
+
+  <div>
+    <input type="radio" id="donation-20" name="amount" value="both" onchange="handleSelection()">
+    <label for="donation-20">20€</label>
+  </div>
+</fieldset>
+
+<div id="payment"></div>
+
+<p style="color: #BBB; font-size: 80%;">The payment is for <a href="https://hbry.fi" style="color: #FFF;">Helsinki Bachateando ry</a>, a non-profit bachata association.
 </body>
 </html>

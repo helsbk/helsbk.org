@@ -17,6 +17,12 @@ const COL_SBK = 11;
 const COL_SB = 12;
 const COL_BK = 13;
 
+const GITHUB_HEADERS = new Headers({
+  'Accept': 'application/vnd.github+json',
+  'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`,
+  'X-GitHub-Api-Version': '2022-11-28',
+});
+
 async function main() {
   const response = await fetch(`https://sheets.googleapis.com/v4/spreadsheets/${process.env.GOOGLE_SHEET_ID}/values/Data?key=${process.env.GOOGLE_API_KEY}`);
   const data = await response.json();
@@ -74,7 +80,31 @@ async function main() {
 
   const pageTemplate = fs.readFileSync('events.html.template', 'utf8');
   const pageHTML = pageTemplate.replace('EVENTS_PLACEHOLDER', eventsHTML);
-  console.log(pageHTML);
+
+  const githubEventsFile = await fetch('https://api.github.com/repos/helsbk/helsbk.github.io/contents/events.html', {
+    method: 'GET',
+    headers: GITHUB_HEADERS,
+  }).then(response => response.json());
+
+  if (pageHTML.trim() === Buffer.from(githubEventsFile.content, 'base64').toString('utf8').trim()) {
+    console.log('HTML matches, skipping!');
+    process.exit(0);
+  }
+
+  const result = await fetch('https://api.github.com/repos/helsbk/helsbk.github.io/contents/events.html', {
+    method: 'PUT',
+    body: JSON.stringify({
+      message: 'Update events',
+      committer: {
+        name: 'KapsiBot',
+        email: 'no-reply@hbry.fi'
+      },
+      content: Buffer.from(pageHTML).toString('base64'),
+      sha: githubEventsFile.sha,
+    }),
+    headers: GITHUB_HEADERS,
+  }).then(response => response.json());
+  console.log('GitHub:', result.message);
 }
 
 main();

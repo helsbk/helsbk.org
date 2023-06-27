@@ -2,20 +2,20 @@ const fs = require('fs');
 
 const DATE_DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
-const COL_URL = 0;
-const COL_DATE = 1;
-const COL_START = 2;
-const COL_END = 3;
-const COL_ORGANIZER = 4;
-const COL_LOCATION = 5;
-const COL_PRICE = 6;
-const COL_BACHATA = 7;
-const COL_SALSA = 8;
-const COL_KIZOMBA = 9;
-const COL_URBANKIZ = 10;
-const COL_SBK = 11;
-const COL_SB = 12;
-const COL_BK = 13;
+const COL_DATE = 0;
+const COL_START = 1;
+const COL_END = 2;
+const COL_ORGANIZER = 3;
+const COL_LOCATION = 4;
+const COL_PRICE = 5;
+const COL_BACHATA = 6;
+const COL_SALSA = 7;
+const COL_KIZOMBA = 8;
+const COL_URBANKIZ = 9;
+const COL_SBK = 10;
+const COL_SB = 11;
+const COL_BK = 12;
+const COL_URL = 13;
 
 const GITHUB_HEADERS = new Headers({
   'Accept': 'application/vnd.github+json',
@@ -37,7 +37,7 @@ async function main() {
 
   const rows = data.values;
   const header = rows[0];
-  if (header[COL_URL] !== 'URL' && header[COL_DATE] !== 'Date') {
+  if (header[COL_DATE] !== 'Date' || header[COL_URL] !== 'URL') {
     throw new Error('Unexpected header: ' + header);
   }
 
@@ -87,7 +87,7 @@ async function main() {
   }).then(response => response.json());
 
   if (pageHTML.trim() === Buffer.from(githubEventsFile.content, 'base64').toString('utf8').trim()) {
-    console.log('HTML matches, skipping!');
+    console.log('Already up-to-date, skipping!');
     process.exit(0);
   }
 
@@ -104,7 +104,7 @@ async function main() {
     }),
     headers: GITHUB_HEADERS,
   }).then(response => response.json());
-  console.log('GitHub:', result.message);
+  console.log(result.message || 'Updated!');
 }
 
 main();

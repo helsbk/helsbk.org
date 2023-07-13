@@ -17,8 +17,36 @@ body {
 }
 
 a {
-  color: #559bdb;
   text-decoration: none;
+}
+
+.button-container {
+  display: inline-block;
+  padding: 8px;
+  width: 110px;
+  margin-bottom: 8px;
+  background-color: #111;
+  border: 2px solid #222;
+  font-size: 18px;
+}
+
+.button-container a {
+  color: #EEE;
+}
+
+.button-icon {
+  margin-left: auto;
+  margin-right: auto;
+  width: 28px;
+  height: 28px;
+}
+
+.button-text {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-top: 8px;
+  text-align: center;
 }
 </style>
 </head>
@@ -27,15 +55,52 @@ a {
 
 <p>Helsinki SBK organizes salsa, bachata, and kizomba social dance parties in Helsinki.
 
-<p>Find out more at:
+<div class="button-container">
+  <a href="/events">
+  <div class="button-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#FFE27C" viewBox="0 0 256 256"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-96-88v64a8,8,0,0,1-16,0V132.94l-4.42,2.22a8,8,0,0,1-7.16-14.32l16-8A8,8,0,0,1,112,120Zm59.16,30.45L152,176h16a8,8,0,0,1,0,16H136a8,8,0,0,1-6.4-12.8l28.78-38.37A8,8,0,1,0,145.07,132a8,8,0,1,1-13.85-8A24,24,0,0,1,176,136,23.76,23.76,0,0,1,171.16,150.45Z"></path></svg>
+  </div>
+  <div class="button-text">Events</div>
+  </a>
+</div>
 
-<p>
-  <ul>
-    <li><a href="/events">Events</a> for all socials in Helsinki</a>
-    <li><a href="/pay">Pay</a> to pay the entrance fee for our events
-    <li><a href="https://www.facebook.com/HelSBK">Facebook page</a> to follow our events
-  </ul>
+<div class="button-container">
+  <a href="/pay">
+  <div class="button-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#BEFF7C" viewBox="0 0 256 256"><path d="M224,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48Zm0,16V88H32V64Zm0,128H32V104H224v88Zm-16-24a8,8,0,0,1-8,8H168a8,8,0,0,1,0-16h32A8,8,0,0,1,208,168Zm-64,0a8,8,0,0,1-8,8H120a8,8,0,0,1,0-16h16A8,8,0,0,1,144,168Z"></path></svg>
+  </div>
+  <div class="button-text">Pay</div>
+  </a>
+</div>
 
-<p><small style="color: #BBB">In case you need to contact us, us a message at contact (ät) helsbk.org.</small>
+<div class="button-container">
+  <a href="/donate">
+  <div class="button-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#FF7C7C" viewBox="0 0 256 256"><path d="M230.33,141.06a24.34,24.34,0,0,0-18.61-4.77C230.5,117.33,240,98.48,240,80c0-26.47-21.29-48-47.46-48A47.58,47.58,0,0,0,156,48.75,47.58,47.58,0,0,0,119.46,32C93.29,32,72,53.53,72,80c0,11,3.24,21.69,10.06,33a31.87,31.87,0,0,0-14.75,8.4L44.69,144H16A16,16,0,0,0,0,160v40a16,16,0,0,0,16,16H120a7.93,7.93,0,0,0,1.94-.24l64-16a6.94,6.94,0,0,0,1.19-.4L226,182.82l.44-.2a24.6,24.6,0,0,0,3.93-41.56ZM119.46,48A31.15,31.15,0,0,1,148.6,67a8,8,0,0,0,14.8,0,31.15,31.15,0,0,1,29.14-19C209.59,48,224,62.65,224,80c0,19.51-15.79,41.58-45.66,63.9l-11.09,2.55A28,28,0,0,0,140,112H100.68C92.05,100.36,88,90.12,88,80,88,62.65,102.41,48,119.46,48ZM16,160H40v40H16Zm203.43,8.21-38,16.18L119,200H56V155.31l22.63-22.62A15.86,15.86,0,0,1,89.94,128H140a12,12,0,0,1,0,24H112a8,8,0,0,0,0,16h32a8.32,8.32,0,0,0,1.79-.2l67-15.41.31-.08a8.6,8.6,0,0,1,6.3,15.9Z"></path></svg>
+  </div>
+  <div class="button-text">Donate</div>
+  </a>
+</div>
+
+<div class="button-container">
+  <a href="https://www.facebook.com/HelSBK">
+  <div class="button-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#4267B2" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path></svg>
+  </div>
+  <div class="button-text">Facebook</div>
+  </a>
+</div>
+
+<div class="button-container">
+  <a href="https://www.instagram.com/helsbk/">
+  <div class="button-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#F56040" viewBox="0 0 256 256"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path></svg>
+  </div>
+  <div class="button-text">Instagram</div>
+  </a>
+</div>
+
+
+<p><small style="color: #BBB">To contact us, message us on Facebook, Instagram or via email: contact (ät) helsbk.org</small>
 </body>
 </html>

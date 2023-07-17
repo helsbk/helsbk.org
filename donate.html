@@ -16,13 +16,17 @@ body {
   line-height: 1.3;
 }
 
+h3 {
+  font-weight: normal;
+}
+
 a {
   color: #559bdb;
   text-decoration: none;
 }
 
-fieldset div {
-  margin-top: 6px;
+#options div {
+  margin-top: 8px;
   margin-bottom: 6px;
 }
 </style>
@@ -53,13 +57,13 @@ function handleSelection() {
 
 <a href="/"><img src="/helsbk.svg" alt="HelSBK (Helsinki SBK logo)"></a>
 
-<p><span style="font-size: 130%">Summer 2023 donation</span>
+<h3>Summer 2023 donation</h3>
 
 <p>Your donation will help us cover expenses for our free outdoor events. Thanks for your help!
 
-<fieldset>
-  <legend><b>Donation amount</b></legend>
+<div><b>Donation amount</b></div>
 
+<div id="options">
   <div>
     <input type="radio" id="donation-10" name="amount" value="10€" onchange="handleSelection()">
     <label for="donation-10">10€</label>
@@ -74,7 +78,7 @@ function handleSelection() {
     <input type="radio" id="donation-20" name="amount" value="20€" onchange="handleSelection()">
     <label for="donation-20">20€</label>
   </div>
-</fieldset>
+</div>
 
 <div id="payment"></div>
 

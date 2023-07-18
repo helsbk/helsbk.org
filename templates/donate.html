@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Donate — Helsinki SBK</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="./style.css" rel="stylesheet">
+{% extends "base.html" %}
+
+{% block head %}
+<title>Donate | Helsinki SBK</title>
 <style type="text/css">
 #options div {
   padding-bottom: 10px;
@@ -26,16 +24,14 @@ function handleSelection() {
   payment.style.display = amount > 0 ? 'block' : 'none';
   payment.innerHTML = `
     <p>
-    <a href="mobilepay://send?phone=0402403791&amount=${amount}&comment=Donation&lock=1"><img src="mobilepay.svg"></a>&nbsp;
-    <a href="https://store.hbry.fi/product/outdoor-bachata-${amount}EUR-donation-for-summer-2023" target="_blank"><img src="visa.svg"></a>&nbsp;
-    <a onclick="handlePayPalClick(${amount})"><img src="paypal.svg"></a>`;
+    <a href="mobilepay://send?phone=0402403791&amount=${amount}&comment=Donation&lock=1"><img src="assets/mobilepay.svg?v={{ get_hash(path='static/assets/mobilepay.svg', sha_type=256) | slugify }}"></a>&nbsp;
+    <a href="https://store.hbry.fi/product/outdoor-bachata-${amount}EUR-donation-for-summer-2023" target="_blank"><img src="assets/visa.svg?v={{ get_hash(path='static/assets/visa.svg', sha_type=256) | slugify }}"></a>&nbsp;
+    <a onclick="handlePayPalClick(${amount})"><img src="assets/paypal.svg?v={{ get_hash(path='static/assets/paypal.svg', sha_type=256) | slugify }}"></a>`;
 }
 </script>
-</head>
-<body>
+{% endblock head %}
 
-<a href="/"><img src="./helsbk.svg?1" height="37" alt="HEL SBK (logo)"></a>
-
+{% block content %}
 <h3>Summer 2023 donation</h3>
 
 <p>You can help us cover the equipment and permit expenses from our outdoor events. Thank you! ❤️
@@ -60,5 +56,4 @@ function handleSelection() {
 <div id="payment"></div>
 
 <p style="color: #BBB; font-size: 80%;">The payment is for <a href="https://hbry.fi" style="color: #FFF;">Helsinki Bachateando ry</a>, a non-profit bachata association.
-</body>
-</html>
+{% endblock content %}

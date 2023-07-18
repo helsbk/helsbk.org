@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Social Dance Events — Helsinki SBK</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+{% extends "base.html" %}
+
+{% block head %}
+<title>Social Events | Helsinki SBK</title>
 <meta name="application-name" content="Helsinki SBK" />
 <meta name="apple-mobile-web-app-title" content="Helsinki SBK" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-<link rel="apple-touch-icon" href="/icon-2x.png" />
-<link href="./style.css" rel="stylesheet">
+<link rel="apple-touch-icon" href="/assets/icon-2x.png?v={{ get_hash(path='static/assets/icon-2x.png', sha_type=256) | slugify }}" />
 <style type="text/css">
 .event-container {
   display: block;
@@ -70,11 +68,9 @@
   background-color: #888;
 }
 </style>
-</head>
-<body>
+{% endblock head %}
 
-<a href="/"><img src="./helsbk.svg?1" height="37" alt="HEL SBK (logo)"></a>
-
+{% block content %}
 <h3>Socials in Helsinki</h3>
 
 <!--events-begin-->
@@ -122,6 +118,4 @@
 <br>
 
 <p><small style="color: #BBB">Listed prices are for walk-in tickets at the door for just the social (excluding possible pre-party classes).</small>
-
-</body>
-</html>
+{% endblock content %}

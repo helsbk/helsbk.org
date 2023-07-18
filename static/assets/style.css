@@ -74,12 +74,12 @@ body {
   font-size: 20px;
   background-color: #000;
   color: #ddd;
-
   padding: 10px;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.1;
+  touch-action: pan-x pan-y;
 }
 
 h3 {

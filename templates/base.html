@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}Helsinki SBK</title>
   <link rel="stylesheet" href="/assets/style.css?v={{ get_hash(path='static/assets/style.css', sha_type=256) | slugify }}">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
   <link rel="apple-touch-icon" href="/assets/icon-2x.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   {% block head %}{% endblock head %}
-  <title>{% if page.title %}{{ page.title }} | {% endif %}Helsinki SBK</title>
 </head>
 <body>
   <div id="logo">

@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block head %}
-<title>Socials in Helsinki (Salsa, Bachata, Kizomba) | Helsinki SBK</title>
 <meta name="application-name" content="Helsinki SBK" />
 <meta name="apple-mobile-web-app-title" content="Helsinki SBK" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -24,13 +23,17 @@
 <style type="text/css">
 .event-container {
   display: block;
-  color: #DDD;
+  color: #ddd;
   background-color: #0c0c0c;
   border: 1px solid #1c1c1c;
   padding: 14px;
   margin-bottom: 14px;
   text-decoration: none;
   line-height: 1.0;
+}
+
+.event-container:hover {
+  border: 1px solid #3c3c3c;
 }
 
 .event-title {
@@ -84,8 +87,6 @@
 {% endblock head %}
 
 {% block content %}
-<h3>Socials in Helsinki</h3>
-
 <!--events-begin-->
 <a href="https://www.facebook.com/events/992603508431941" target="_blank" class="event-container">
   <div class="event-title"><b>Thu 20.7.</b> 18:00 - 21:00</div>
@@ -122,5 +123,5 @@
 
 <br>
 
-<p><small style="color: #BBB">Listed prices are for walk-in tickets at the door for just the social (excluding possible pre-party classes).</small>
+<p style="color: #BBB;"><small>This page lists salsa, bachata, kizomba & urbankiz dance events and parties in Helsinki from multiple different organizers. Listed time is for just the social, excluding possible pre-party classes. Listed price is for walk-in ticket at the door.</small>
 {% endblock content %}

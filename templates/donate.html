@@ -7,6 +7,10 @@
 }
 </style>
 <script type="text/javascript">
+function handleMobilePayClick(sum) {
+  window.open(`mobilepay://send?phone=0402403791&amount=${sum}&comment=Summer%20Ticket&lock=1`, '_blank');
+}
+
 function handlePayPalClick(sum) {
   if (confirm('Please select "payment for friends and family" instead of "products and services" when you get to the PayPal payment page. OK?')) {
     window.open('https://www.paypal.me/helsinkibachateando/' + sum, '_blank');
@@ -23,7 +27,7 @@ function handleSelection() {
   payment.style.display = amount > 0 ? 'block' : 'none';
   payment.innerHTML = `
     <p>
-    <a href="mobilepay://send?phone=0402403791&amount=${amount}&comment=Summer%20Ticket&lock=1"><img src="assets/mobilepay.svg?v={{ get_hash(path='static/assets/mobilepay.svg', sha_type=256) | slugify }}"></a>&nbsp;
+    <a onclick="handleMobilePayClick(${amount})"><img src="assets/mobilepay.svg?v={{ get_hash(path='static/assets/mobilepay.svg', sha_type=256) | slugify }}"></a>&nbsp;
     <a href="https://store.hbry.fi/product/outdoor-bachata-${amount}EUR-ticket-for-summer-2023" target="_blank"><img src="assets/visa.svg?v={{ get_hash(path='static/assets/visa.svg', sha_type=256) | slugify }}"></a>&nbsp;
     <a onclick="handlePayPalClick(${amount})"><img src="assets/paypal.svg?v={{ get_hash(path='static/assets/paypal.svg', sha_type=256) | slugify }}"></a>`;
 }

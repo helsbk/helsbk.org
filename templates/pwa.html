@@ -63,7 +63,9 @@ body, html {
 </style>
 <script type="text/javascript">
 function switchFrame(clickedElement, path) {
-  document.getElementById('frame').src = path;
+  const frame = document.getElementById('frame');
+  frame.src = 'about:blank';
+  frame.src = path;
   document.querySelectorAll('.nav-button-active').forEach(e => e.classList.remove('nav-button-active'));
   clickedElement.classList.add('nav-button-active');
 }

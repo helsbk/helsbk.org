@@ -1,0 +1,11 @@
+{% extends "_head.html" %}
+
+{% block body %}
+<body>
+  <div id="logo">
+    <a href="/"><img src="/assets/logo.svg?v=2"></a> {% if page.title %}{{ page.title }}{% endif %}
+  </div>
+  {% block content %}{% endblock content %}
+</body>
+</html>
+{% endblock body %}

@@ -4,10 +4,18 @@
   <meta charset="utf-8">
   <title>{% if page.title %}{{ page.title }} | {% endif %}Helsinki SBK</title>
   <link rel="stylesheet" href="/assets/style.css?v={{ get_hash(path='static/assets/style.css', sha_type=256) | slugify }}">
+  <link rel="manifest" href="/app.webmanifest">
+  <meta name="application-name" content="Helsinki SBK">
+  <meta name="apple-mobile-web-app-title" content="Helsinki SBK">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="mobile-web-app-capable" content="yes">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
-  <link rel="apple-touch-icon" href="/assets/icon-2x.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon-180.png">
+  <link rel="apple-touch-icon" sizes="360x360" href="/assets/icon-360.png">
+  <link rel="apple-touch-startup-image" href="/assets/startup-icon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   {% block head %}{% endblock head %}
 </head>

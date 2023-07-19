@@ -1,11 +1,6 @@
 {% extends "base.html" %}
 
 {% block head %}
-<meta name="application-name" content="Helsinki SBK" />
-<meta name="apple-mobile-web-app-title" content="Helsinki SBK" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <script type="text/javascript">
 (function () {
   // Reload in 12 hours.
@@ -20,70 +15,6 @@
   });
 })();
 </script>
-<style type="text/css">
-.event-container {
-  display: block;
-  color: #ddd;
-  background-color: #0c0c0c;
-  border: 1px solid #1c1c1c;
-  padding: 14px;
-  margin-bottom: 14px;
-  text-decoration: none;
-  line-height: 1.0;
-}
-
-.event-container:hover {
-  border: 1px solid #3c3c3c;
-}
-
-.event-title {
-  font-size: 20px;
-  margin-bottom: 8px;
-}
-
-.event-organizer {
-  color: #559bdb;
-}
-
-.event-location {
-  color: #AAA;
-  margin-bottom: 12px;
-  font-size: 19px;
-}
-
-.dance-styles > * {
-  display: inline-block;
-  margin-right: 4px;
-  padding: 5px 8px;
-  border-radius: 8px;
-  font-size: 14px;
-  white-space: nowrap;
-}
-
-.dance-styles:last-child {
-  margin-bottom: 0px;
-}
-
-.dance-styles .bachata {
-  background-color: #6c650c;
-}
-
-.dance-styles .salsa {
-  background-color: #80490d;
-}
-
-.dance-styles .kizomba {
-  background-color: #366108;
-}
-
-.dance-styles .mixed {
-  background: linear-gradient(90deg, #6c650c, #366108, #80490d);
-}
-
-.dance-styles .other {
-  background-color: #888;
-}
-</style>
 {% endblock head %}
 
 {% block content %}

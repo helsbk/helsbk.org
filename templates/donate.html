@@ -27,15 +27,17 @@ function handleSelection() {
     <a href="https://store.hbry.fi/product/outdoor-bachata-${amount}EUR-ticket-for-summer-2023" target="_blank"><img src="assets/visa.svg?v={{ get_hash(path='static/assets/visa.svg', sha_type=256) | slugify }}"></a>&nbsp;
     <a onclick="handlePayPalClick(${amount})"><img src="assets/paypal.svg?v={{ get_hash(path='static/assets/paypal.svg', sha_type=256) | slugify }}"></a>`;
 }
+
+document.addEventListener('DOMContentLoaded', () => handleSelection());
 </script>
 {% endblock head %}
 
 {% block content %}
-<p>Our outdoor events are free so payment is not necessary. If you'd like, you can help us cover the equipment and permit expenses by purchasing an optional ticket. Thank you! ❤️
+<p>Helsinki SBK outdoor events are free so payment is not necessary. If you'd like, you can help us cover the equipment and permit expenses by purchasing an optional ticket. Thank you! ❤️
 
 <div id="options">
   <div>
-    <input type="radio" id="ticket-10" name="amount" value="10€" onchange="handleSelection()">
+    <input type="radio" id="ticket-10" name="amount" value="10€" onchange="handleSelection()" checked>
     <label for="ticket-10">10€</label>
   </div>
 

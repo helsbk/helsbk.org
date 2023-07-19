@@ -2,8 +2,8 @@
 
 {% block body %}
 <body>
-  <div id="logo">
-    <a href="/"><img src="/assets/logo.svg?v=2"></a> <span class="standalone-hidden">{% if page.title %}{{ page.title }}{% endif %}</span>
+  <div id="logo" class="standalone-hidden">
+    <a href="/"><img src="/assets/logo.svg?v=2"></a> {% if page.title %}{{ page.title }}{% endif %}
   </div>
   {% block content %}{% endblock content %}
 </body>

@@ -1,4 +1,4 @@
 +++
-title = "Donate"
+title = "Pay"
 template = "donate.html"
 +++

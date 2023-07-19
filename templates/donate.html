@@ -14,39 +14,39 @@ function handlePayPalClick(sum) {
 }
 
 function handleSelection() {
-  const donation10 = document.getElementById('donation-10');
-  const donation15 = document.getElementById('donation-15');
-  const donation20 = document.getElementById('donation-20');
+  const ticket10 = document.getElementById('ticket-10');
+  const ticket15 = document.getElementById('ticket-15');
+  const ticket20 = document.getElementById('ticket-20');
   const payment = document.getElementById('payment');
 
-  const amount = donation10.checked ? 10 : donation15.checked ? 15 : donation20.checked ? 20 : 0;
+  const amount = ticket10.checked ? 10 : ticket15.checked ? 15 : ticket20.checked ? 20 : 0;
   payment.style.display = amount > 0 ? 'block' : 'none';
   payment.innerHTML = `
     <p>
-    <a href="mobilepay://send?phone=0402403791&amount=${amount}&comment=Donation&lock=1"><img src="assets/mobilepay.svg?v={{ get_hash(path='static/assets/mobilepay.svg', sha_type=256) | slugify }}"></a>&nbsp;
-    <a href="https://store.hbry.fi/product/outdoor-bachata-${amount}EUR-donation-for-summer-2023" target="_blank"><img src="assets/visa.svg?v={{ get_hash(path='static/assets/visa.svg', sha_type=256) | slugify }}"></a>&nbsp;
+    <a href="mobilepay://send?phone=0402403791&amount=${amount}&comment=Summer%20Ticket&lock=1"><img src="assets/mobilepay.svg?v={{ get_hash(path='static/assets/mobilepay.svg', sha_type=256) | slugify }}"></a>&nbsp;
+    <a href="https://store.hbry.fi/product/outdoor-bachata-${amount}EUR-ticket-for-summer-2023" target="_blank"><img src="assets/visa.svg?v={{ get_hash(path='static/assets/visa.svg', sha_type=256) | slugify }}"></a>&nbsp;
     <a onclick="handlePayPalClick(${amount})"><img src="assets/paypal.svg?v={{ get_hash(path='static/assets/paypal.svg', sha_type=256) | slugify }}"></a>`;
 }
 </script>
 {% endblock head %}
 
 {% block content %}
-<p>You can help us cover the equipment and permit expenses from our outdoor events. Thank you! ❤️
+<p>Our outdoor events are free so payment is not necessary. If you'd like, you can help us cover the equipment and permit expenses by purchasing an optional ticket. Thank you! ❤️
 
 <div id="options">
   <div>
-    <input type="radio" id="donation-10" name="amount" value="10€" onchange="handleSelection()">
-    <label for="donation-10">10€</label>
+    <input type="radio" id="ticket-10" name="amount" value="10€" onchange="handleSelection()">
+    <label for="ticket-10">10€</label>
   </div>
 
   <div>
-    <input type="radio" id="donation-15" name="amount" value="15€" onchange="handleSelection()">
-    <label for="donation-15">15€</label>
+    <input type="radio" id="ticket-15" name="amount" value="15€" onchange="handleSelection()">
+    <label for="ticket-15">15€</label>
   </div>
 
   <div>
-    <input type="radio" id="donation-20" name="amount" value="20€" onchange="handleSelection()">
-    <label for="donation-20">20€</label>
+    <input type="radio" id="ticket-20" name="amount" value="20€" onchange="handleSelection()">
+    <label for="ticket-20">20€</label>
   </div>
 </div>
 

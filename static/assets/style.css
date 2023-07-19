@@ -128,10 +128,6 @@ a {
   font-size: 15px;
 }
 
-.button-container:hover {
-  border: 1px solid #3c3c3c;
-}
-
 .button-container a {
   color: #ccc;
 }
@@ -164,12 +160,21 @@ a {
   line-height: 1.0;
 }
 
-.event-container:hover {
-  border: 1px solid #3c3c3c;
+@media (max-width: 600px) {
+  .event-container {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
 }
 
 .event-title {
   margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+  .event-title {
+    margin-bottom: 7px;
+  }
 }
 
 .event-organizer {
@@ -179,6 +184,12 @@ a {
 .event-location {
   color: #AAA;
   margin-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+  .event-location {
+    margin-bottom: 11px;
+  }
 }
 
 .dance-styles > * {

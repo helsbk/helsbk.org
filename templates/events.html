@@ -9,7 +9,11 @@
     if (document.visibilityState === 'visible') {
       const HOUR_MS = 60 * 60 * 1000;
       if (Date.now() > (loadTime + (HOUR_MS * 12))) {
-        location.reload();
+        if (window.top) {
+          window.top.location.reload();
+        } else {
+          location.reload();
+        }
       }
     }
   });

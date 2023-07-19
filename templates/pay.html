@@ -19,6 +19,6 @@ function handlePayPalClick() {
   <a href="https://store.hbry.fi/product/social-dance-entrance-ticket" target="_blank"><img src="assets/visa.svg?v={{ get_hash(path='static/assets/visa.svg', sha_type=256) | slugify }}"></a>&nbsp;
   <a onclick="handlePayPalClick()"><img src="assets/paypal.svg?v={{ get_hash(path='static/assets/paypal.svg', sha_type=256) | slugify }}"></a>
 
-  <p style="color: #BBB; font-size: 80%;">The payment is for <a href="https://hbry.fi" style="color: #FFF;">Helsinki Bachateando ry</a>, a non-profit bachata association.
+  <p style="color: #BBB; font-size: 80%;">The payment is for <a href="https://hbry.fi" target="_blank" style="color: #FFF;">Helsinki Bachateando ry</a>, a non-profit bachata association.
 </div>
 {% endblock content %}

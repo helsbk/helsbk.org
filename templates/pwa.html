@@ -65,7 +65,6 @@ body, html {
 function switchFrame(clickedElement, path) {
   document.getElementById('frame').src = path;
   document.querySelectorAll('.nav-button-active').forEach(e => e.classList.remove('nav-button-active'));
-  console.log('click', clickedElement);
   clickedElement.classList.add('nav-button-active');
 }
 </script>

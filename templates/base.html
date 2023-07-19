@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>{% if page.title %}{{ page.title }} | {% endif %}Helsinki SBK</title>
   <link rel="stylesheet" href="/assets/style.css?v={{ get_hash(path='static/assets/style.css', sha_type=256) | slugify }}">
-  <link rel="manifest" href="/app.webmanifest">
+  <link rel="manifest" href="/manifest.json">
   <meta name="application-name" content="Helsinki SBK">
   <meta name="apple-mobile-web-app-title" content="Helsinki SBK">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -31,6 +31,7 @@
   <link rel="apple-touch-startup-image" href="/assets/apple-splash-750-1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)">
   <link rel="apple-touch-startup-image" href="/assets/apple-splash-640-1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="google" value="notranslate">
   {% block head %}{% endblock head %}
 </head>
 <body>

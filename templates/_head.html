@@ -33,6 +33,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="google" value="notranslate">
   {% block head %}{% endblock head %}
+
+  <script type="text/javascript">
+    // Prevent PWA on desktop Chrome.
+    if (navigator.userAgent.indexOf('Mobile') === -1) {
+      document.querySelector('link[rel="manifest"]').remove();
+    }
+  </script>
 </head>
 
 {% block body %}{% endblock body %}

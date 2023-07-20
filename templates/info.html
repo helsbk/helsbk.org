@@ -3,8 +3,16 @@
 
 {% block head %}
 <style type="text/css">
-.event-location {
+.event-title, .event-location {
   line-height: 1.2;
+}
+
+h4 {
+  margin-bottom: 8px;
+}
+
+p {
+  margin-top: 8px;
 }
 </style>
 {% endblock head %}
@@ -12,26 +20,24 @@
 {% block content %}
 <h4>About us</h4>
 
-<p>Helsinki SBK organizes non-profit salsa, bachata, and kizomba social dance parties in Helsinki. We are offcially registered as a non-profit association called <a href="https://hbry.fi" target="_blank">Helsinki Bachateando ry</a>. Our mission is to enhance the dance scene in Helsinki and provide more opportunities for social dancing.
+<p>Helsinki SBK organizes non-profit salsa, bachata, and kizomba social dance parties in Helsinki. We are offcially registered as <a href="https://hbry.fi" target="_blank">Helsinki Bachateando ry</a>, a non-profit association. Our mission is to enhance the dance scene in Helsinki and provide more opportunities for social dancing.
 
 <h4>Event organizers</h4>
 
 <p>We list events from several other organizers as well. In alphabetical order:</p>
 
 <a href="https://avecdanceclub.com" target="_blank" class="event-container">
-  <div class="event-title"><b>Avec</b></div>
-  <div class="event-location"><span class="event-organizer">avecdanceclub.com</span></div>
+  <div class="event-title">Avec<br><span class="event-organizer">avecdanceclub.com</span></div>
   <div class="event-location">Dance school in Vallila</div>
   <div class="dance-styles">
-    <div class="bachata">bachata</div>
     <div class="salsa">salsa</div>
+    <div class="bachata">bachata</div>
     <div class="kizomba">kizomba</div>
   </div>
 </a>
 
 <a href="https://www.azembora.com" target="_blank" class="event-container">
-  <div class="event-title"><b>Azembora</b></div>
-  <div class="event-location"><span class="event-organizer">azembora.com</span></div>
+  <div class="event-title">Azembora<br><span class="event-organizer">azembora.com</span></div>
   <div class="event-location">Dance school in Sörnäinen</div>
   <div class="dance-styles">
     <div class="kizomba">kizomba</div>
@@ -40,8 +46,7 @@
 </a>
 
 <a href="https://bachatahelsinki.fi" target="_blank" class="event-container">
-  <div class="event-title"><b>Bachata Helsinki / Bongos</b></div>
-  <div class="event-location"><span class="event-organizer">bachatahelsinki.fi</span></div>
+  <div class="event-title">Bachata Helsinki / Bongos<br><span class="event-organizer">bachatahelsinki.fi</span></div>
   <div class="event-location">Dance school in Sörnäinen</div>
   <div class="dance-styles">
     <div class="bachata">bachata</div>
@@ -51,40 +56,64 @@
 </a>
 
 <a href="https://www.bachatafinland.com" target="_blank" class="event-container">
-  <div class="event-title"><b>Bachata Studio</b></div>
-  <div class="event-location"><span class="event-organizer">bachatafinland.com</span></div>
+  <div class="event-title">Bachata Studio<br><span class="event-organizer">bachatafinland.com</span></div>
   <div class="event-location">Dance school in Espoo</div>
   <div class="dance-styles">
     <div class="bachata">bachata</div>
   </div>
 </a>
 
+<a href="https://bailabaila.fi" target="_blank" class="event-container">
+  <div class="event-title">Baila Baila<br><span class="event-organizer">bailabaila.fi</span></div>
+  <div class="event-location">Dance school in Kamppi</div>
+  <div class="dance-styles">
+    <div class="salsa">salsa</div>
+    <div class="bachata">bachata</div>
+  </div>
+</a>
+
+<a href="https://www.helsinkisalsaacademy.com" target="_blank" class="event-container">
+  <div class="event-title">Helsinki Salsa Academy<br><span class="event-organizer">helsinkisalsaacademy.com</span></div>
+  <div class="event-location">Dance school in Konala, classes also in Kallio, Salmisaari & Vantaa</div>
+  <div class="dance-styles">
+    <div class="salsa">salsa</div>
+    <div class="bachata">bachata</div>
+  </div>
+</a>
+
 <a href="https://www.facebook.com/groups/278476390628404" target="_blank" class="event-container">
-  <div class="event-title"><b>Late</b></div>
-  <div class="event-location"><span class="event-organizer">Facebook group</span></div>
+  <div class="event-title">Late<br><span class="event-organizer">Facebook group</span></div>
   <div class="event-location">Outdoor event organizer</div>
   <div class="dance-styles">
-    <div class="bachata">bachata</div>
     <div class="salsa">salsa</div>
+    <div class="bachata">bachata</div>
   </div>
 </a>
 
 <a href="https://www.salsaborealis.fi" target="_blank" class="event-container">
-  <div class="event-title"><b>Salsa Borealis</b></div>
-  <div class="event-location"><span class="event-organizer">salsaborealis.fi</span></div>
+  <div class="event-title">Salsa Borealis<br><span class="event-organizer">salsaborealis.fi</span></div>
   <div class="event-location">Non-profit association and event organizer</div>
   <div class="dance-styles">
     <div class="salsa">salsa</div>
   </div>
 </a>
 
-<a href="https://stilldancing.fi" target="_blank" class="event-container">
-  <div class="event-title"><b>Still Dancing</b></div>
-  <div class="event-location"><span class="event-organizer">stilldancing.fi</span></div>
-  <div class="event-location">Dance school in Salmisaari & Vantaa</div>
+<a href="https://salsastudio.fi/helsinki" target="_blank" class="event-container">
+  <div class="event-title">Salsa Studio<br><span class="event-organizer">salsastudio.fi</span></div>
+  <div class="event-location">Dance school in Pitäjänmäki</div>
   <div class="dance-styles">
-    <div class="bachata">bachata</div>
     <div class="salsa">salsa</div>
+    <div class="kizomba">kizomba</div>
+    <div class="bachata">bachata</div>
+  </div>
+</a>
+
+<a href="https://stilldancing.fi" target="_blank" class="event-container">
+  <div class="event-title">Still Dancing<br><span class="event-organizer">stilldancing.fi</span></div>
+  <div class="event-location">Dance school in Salmisaari, classes also in Vantaa</div>
+  <div class="dance-styles">
+    <div class="salsa">salsa</div>
+    <div class="bachata">bachata</div>
   </div>
 </a>
 
@@ -93,8 +122,7 @@
 <p>The following organizers have private groups for members only so their events are not visible in our list. Find out more about their events in their Facebook groups:</p>
 
 <a href="https://www.facebook.com/groups/1710462685876573" target="_blank" class="event-container">
-  <div class="event-title"><b>Summer Outdoor Bachata</b></div>
-  <div class="event-location"><span class="event-organizer">Private Facebook group</span></div>
+  <div class="event-title">Summer Outdoor Bachata<br><span class="event-organizer">Private Facebook group</span></div>
   <div class="event-location">Bachata event organizer. Biggest bachata parties in Helsinki 🔥</div>
   <div class="dance-styles">
     <div class="bachata">bachata</div>
@@ -102,8 +130,7 @@
 </a>
 
 <a href="https://www.facebook.com/groups/925264681474316" target="_blank" class="event-container">
-  <div class="event-title"><b>Urbankiz Helsinki</b></div>
-  <div class="event-location"><span class="event-organizer">Private Facebook group</span></div>
+  <div class="event-title">Urbankiz Helsinki<br><span class="event-organizer">Private Facebook group</span></div>
   <div class="event-location">Urbankiz event organizer</div>
   <div class="dance-styles">
     <div class="kizomba">urbankiz</div>

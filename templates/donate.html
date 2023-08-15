@@ -8,7 +8,13 @@
 </style>
 <script type="text/javascript">
 function handleMobilePayClick(sum) {
-  window.open(`mobilepay://send?phone=0402403791&amount=${sum}&comment=Summer%20Ticket&lock=1`, '_blank');
+  const payment = document.getElementById('payment');
+  payment.innerHTML = `
+<p>Please send ${sum}€ via MobilePay to the following number:
+
+<p><b>040&zwj;2403791</b>
+
+<p>Thank you!`
 }
 
 function handlePayPalClick(sum) {
@@ -57,8 +63,6 @@ document.addEventListener('DOMContentLoaded', () => handleSelection());
 </div>
 
 <div id="payment"></div>
-
-<p><b>MobilePay number:</b> 0402403791</p>
 
 <p style="color: #BBB; font-size: 80%;">The payment is for <a href="https://hbry.fi" target="_blank" style="color: #FFF;">Helsinki Bachateando ry</a>, a non-profit bachata association.
 {% endblock content %}

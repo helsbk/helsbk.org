@@ -7,35 +7,18 @@
 }
 </style>
 <script type="text/javascript">
-function handleMobilePayClick(sum) {
+function handleMobilePayClick() {
   const payment = document.getElementById('payment');
   payment.innerHTML = `
-<p>Please send ${sum}€ via MobilePay to the following number:
-
-<p style="user-select: text;"><b>0402403791</b>
+<h3 style="user-select: text; color: ">MobilePay number: 0402403791</h3>
 
 <br>`
 }
 
-function handlePayPalClick(sum) {
+function handlePayPalClick() {
   if (confirm('Please select "payment for friends and family" instead of "products and services" when you get to the PayPal payment page. OK?')) {
-    window.open('https://www.paypal.me/helsinkibachateando/' + sum, '_blank');
+    window.open('https://www.paypal.me/helsinkibachateando/', '_blank');
   }
-}
-
-function handleSelection() {
-  const ticket10 = document.getElementById('ticket-10');
-  const ticket15 = document.getElementById('ticket-15');
-  const ticket20 = document.getElementById('ticket-20');
-  const payment = document.getElementById('payment');
-
-  const amount = ticket10.checked ? 10 : ticket15.checked ? 15 : ticket20.checked ? 20 : 0;
-  payment.style.display = amount > 0 ? 'block' : 'none';
-  payment.innerHTML = `
-    <p>
-    <a onclick="handleMobilePayClick(${amount})"><img src="assets/mobilepay.svg?v={{ get_hash(path='static/assets/mobilepay.svg', sha_type=256) | slugify }}"></a>&nbsp;
-    <a href="https://store.hbry.fi/product/outdoor-bachata-${amount}EUR-ticket-for-summer-2023" target="_blank"><img src="assets/visa.svg?v={{ get_hash(path='static/assets/visa.svg', sha_type=256) | slugify }}"></a>&nbsp;
-    <a onclick="handlePayPalClick(${amount})"><img src="assets/paypal.svg?v={{ get_hash(path='static/assets/paypal.svg', sha_type=256) | slugify }}"></a>`;
 }
 
 document.addEventListener('DOMContentLoaded', () => handleSelection());
@@ -43,26 +26,14 @@ document.addEventListener('DOMContentLoaded', () => handleSelection());
 {% endblock head %}
 
 {% block content %}
-<p>Helsinki SBK outdoor events are free so payment is not necessary. If you'd like, you can help us cover the equipment and permit expenses by purchasing an optional ticket. Thank you! ❤️
+<p>Helsinki SBK outdoor events are free, but you can help us cover the equipment and permit expenses by purchasing an optional ticket for the sum of your choice (we suggest something between 5€ - 20€). Thank you! ❤️
 
-<div id="options">
-  <div>
-    <input type="radio" id="ticket-10" name="amount" value="10€" onchange="handleSelection()" checked>
-    <label for="ticket-10">10€</label>
-  </div>
-
-  <div>
-    <input type="radio" id="ticket-15" name="amount" value="15€" onchange="handleSelection()">
-    <label for="ticket-15">15€</label>
-  </div>
-
-  <div>
-    <input type="radio" id="ticket-20" name="amount" value="20€" onchange="handleSelection()">
-    <label for="ticket-20">20€</label>
-  </div>
+<div id="payment">
+<p>
+  <a onclick="handleMobilePayClick()"><img src="assets/mobilepay.svg?v={{ get_hash(path='static/assets/mobilepay.svg', sha_type=256) | slugify }}"></a>&nbsp;
+  <a href="https://store.hbry.fi/product/outdoor-bachata-ticket-for-summer-2023" target="_blank"><img src="assets/visa.svg?v={{ get_hash(path='static/assets/visa.svg', sha_type=256) | slugify }}"></a>&nbsp;
+  <a onclick="handlePayPalClick()"><img src="assets/paypal.svg?v={{ get_hash(path='static/assets/paypal.svg', sha_type=256) | slugify }}"></a>
 </div>
-
-<div id="payment"></div>
 
 <p style="color: #BBB; font-size: 80%;">The payment is for <a href="https://hbry.fi" target="_blank" style="color: #FFF;">Helsinki Bachateando ry</a>, a non-profit bachata association.
 {% endblock content %}

@@ -211,28 +211,33 @@ a {
   font-size: 14px;
   line-height: 1;
   white-space: nowrap;
+  background-color: #888;
 }
 
 .dance-styles:last-child {
   margin-bottom: 0px;
 }
 
-.dance-styles .bachata {
+.dance-styles .b {
   background-color: #605e0b;
 }
 
-.dance-styles .salsa {
+.dance-styles .s {
   background-color: #80490d;
 }
 
-.dance-styles .kizomba {
+.dance-styles .k {
   background-color: #366108;
 }
 
-.dance-styles .mixed {
-  background: linear-gradient(90deg, #605e0b, #366108, #80490d);
+.dance-styles .sbk {
+  background: linear-gradient(90deg, #80490d, #605e0b, #366108);
 }
 
-.dance-styles .other {
-  background-color: #888;
+.dance-styles .sb {
+  background: linear-gradient(90deg, #80490d, #605e0b);
+}
+
+.dance-styles .bk {
+  background: linear-gradient(90deg, #605e0b, #366108);
 }

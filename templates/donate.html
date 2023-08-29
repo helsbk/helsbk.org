@@ -10,7 +10,7 @@
 function handleMobilePayClick() {
   const payment = document.getElementById('payment');
   payment.innerHTML = `
-<h3 style="user-select: text; color: ">MobilePay number: 0402403791</h3>
+<h3 style="user-select: text;">MobilePay number: 0402403791</h3>
 
 <br>`
 }
@@ -20,8 +20,6 @@ function handlePayPalClick() {
     window.open('https://www.paypal.me/helsinkibachateando/', '_blank');
   }
 }
-
-document.addEventListener('DOMContentLoaded', () => handleSelection());
 </script>
 {% endblock head %}
 

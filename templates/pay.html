@@ -10,22 +10,22 @@
 
 {% block content %}
 
-<h3>MobilePay</h3>
+<p>Social Entrance: <b>5€</b>
 
-<p style="user-select: text;">Send <b>9€</b> with MobilePay to: <b>0402403791</b></p>
 
-<br>
+<p>Please pay with <b>MobilePay</b> to: <span style="user-select: text;"><b>0402403791</b></span>
 
-<h3>Credit & Debit Cards</h3>
 
-<p>
-  <a href="https://buy.stripe.com/00g2947RIgskapacMN"><img src="assets/visa.svg?v={{ get_hash(path='static/assets/visa.svg', sha_type=256) | slugify }}"></a>&nbsp;
-  <a href="https://www.paypal.me/helsinkibachateando/9" target="_blank"><img src="assets/paypal.svg?v={{ get_hash(path='static/assets/paypal.svg', sha_type=256) | slugify }}"></a>
+<br><br><br><br>
 
-<h3>Employee Benefit</h3>
+<p style="font-size: 80%;">If you cannot use MobilePay, you can also pay with:
 
 <p>
-  <a href="https://myedenred.fi/affiliate-payment/42a3d20c-4a9d-43e6-aa2f-0db207503b88" target="_blank"><img src="assets/edenred.svg?v={{ get_hash(path='static/assets/edenred.svg', sha_type=256) | slugify }}"></a>
+  <a href="https://buy.stripe.com/aEU8xsc7Y1xq7cYaEE"><img src="assets/visa.svg?v={{ get_hash(path='static/assets/visa.svg', sha_type=256) | slugify }}" height="70px"></a>&nbsp;
+  <a href="https://www.paypal.me/helsinkibachateando/5" target="_blank"><img src="assets/paypal.svg?v={{ get_hash(path='static/assets/paypal.svg', sha_type=256) | slugify }}" height="70px"></a>&nbsp;
+  <a href="https://myedenred.fi/affiliate-payment/42a3d20c-4a9d-43e6-aa2f-0db207503b88" target="_blank"><img src="assets/edenred.svg?v={{ get_hash(path='static/assets/edenred.svg', sha_type=256) | slugify }}" height="70px"></a>
+
+<br><br>
 
 <p style="color: #BBB; font-size: 80%;">The payment is for <a href="https://hbry.fi" target="_blank" style="color: #FFF;">Helsinki Bachateando ry</a>, a non-profit bachata association.
 {% endblock content %}

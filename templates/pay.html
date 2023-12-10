@@ -6,6 +6,11 @@
   padding-bottom: 10px;
 }
 </style>
+<script type="text/javascript">
+function handleSmartumClick() {
+  alert('To pay with SmartumPay, open the SmartumPay app and search for "Helsinki SBK".');
+}
+</script>
 {% endblock head %}
 
 {% block content %}
@@ -23,7 +28,8 @@
 <p>
   <a href="https://buy.stripe.com/aEU8xsc7Y1xq7cYaEE"><img src="assets/visa.svg?v={{ get_hash(path='static/assets/visa.svg', sha_type=256) | slugify }}" height="70px"></a>&nbsp;
   <a href="https://www.paypal.me/helsinkibachateando/5" target="_blank"><img src="assets/paypal.svg?v={{ get_hash(path='static/assets/paypal.svg', sha_type=256) | slugify }}" height="70px"></a>&nbsp;
-  <a href="https://myedenred.fi/affiliate-payment/42a3d20c-4a9d-43e6-aa2f-0db207503b88" target="_blank"><img src="assets/edenred.svg?v={{ get_hash(path='static/assets/edenred.svg', sha_type=256) | slugify }}" height="70px"></a>
+  <a href="https://myedenred.fi/affiliate-payment/42a3d20c-4a9d-43e6-aa2f-0db207503b88" target="_blank"><img src="assets/edenred.svg?v={{ get_hash(path='static/assets/edenred.svg', sha_type=256) | slugify }}" height="70px"></a>&nbsp;
+  <a onclick="handleSmartumClick()"><img src="assets/smartum.svg?v={{ get_hash(path='static/assets/smartum.svg', sha_type=256) | slugify }}" height="70px"></a>
 
 <br><br>
 

@@ -2,30 +2,44 @@
 
 {% block head %}
 <style type="text/css">
-body {
-  max-width: 700px;
+.payment-container {
+  display: inline-block;
+  padding: 8px;
+  width: 220px;
+  margin-bottom: 8px;
+  background-color: #0c0c0c;
+  border: 2px solid #2c2c2c;
+  font-size: 18px;
+  color: #fff;
 }
+
 </style>
-<script async src="https://js.stripe.com/v3/pricing-table.js"></script>
 {% endblock head %}
 
 {% block content %}
 
-<h3>Payment</h3>
+<h3>Passes</h3>
 
-<stripe-pricing-table pricing-table-id="prctbl_1OMZ6CKf5X9X4vxkym9Y4VEP"
-publishable-key="pk_live_51O8RphKf5X9X4vxkG1ZKj1nWzf0e7jl0a7JG2O7ah7Pgj3ElyrNwvZWucJDHDWb3ynzh6qD6hQKnmPatntiIZC0d004KJj1QP0">
-</stripe-pricing-table>
-
-<br><br><br>
-
-<p style="color: #BBB; font-size: 80%;">The payment is for <a href="https://hbry.fi" target="_blank" style="color: #FFF;">Helsinki Bachateando ry</a>, a non-profit bachata association.
-
-<br><br>
-
-<h3>Schedule</h3>
+<div class="payment-container">
+  <div class="button-text">Full Pass - Individual</div>
+  <div class="button-text"><a href="https://buy.stripe.com/00g1507RIa3WeFq3cg"><b>Buy for 80€ →</b></a></div>
+</div>
 
 <br>
+
+<div class="payment-container">
+  <div class="button-text">Full Pass - Couple</div>
+  <div class="button-text"><a href="https://buy.stripe.com/dR6bJE7RI5NG2WI6ot"><b>Buy for 150€ →</b></a></div>
+</div>
+
+<br>
+
+<div class="payment-container">
+  <div class="button-text">Saturday Pass - Couple</div>
+  <div class="button-text"><a href="https://buy.stripe.com/fZecNI4Fwb80gNyeV0"><b>Buy for 120€ →</b></a></div>
+</div>
+
+<h3>Schedule</h3>
 
 <svg width="80%" viewBox="0 0 795 556" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="795" height="556" fill="black"/>

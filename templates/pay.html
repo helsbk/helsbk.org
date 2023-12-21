@@ -26,14 +26,14 @@ window.addEventListener('load', () => {
 
 {% block content %}
 
-<p>Social Entrance: <b>7€</b>
+<h3>7€ Social Entrance</h3>
+
+<p style="font-size: 80%;">We suggest paying with MobilePay:
+
+<p><img src="assets/mobilepay.svg?v={{ get_hash(path='static/assets/mobilepay.svg', sha_type=256) | slugify }}" height="50px" onclick="handleMobilePayClick()"> <span id="mobilepay-number" style="user-select: text; display: inline-block; vertical-align: middle; height: 60px;"><b>→ 0402403791</b></span>
+
 
 <br><br>
-
-<p><img src="assets/mobilepay.svg?v={{ get_hash(path='static/assets/mobilepay.svg', sha_type=256) | slugify }}" height="50px" onclick="handleMobilePayClick()">&nbsp;&nbsp;<span id="mobilepay-number" style="user-select: text; display: inline-block; vertical-align: middle; height: 60px; color: #5A78FF"><b>0402403791</b></span>
-
-
-<br><br><br>
 
 <p style="font-size: 80%;">If you cannot use MobilePay, you can also pay with:
 

@@ -26,7 +26,7 @@ window.addEventListener('load', () => {
 
 {% block content %}
 
-<h3>10€ Social Entrance</h3>
+<h3>3€ Social Entrance</h3>
 
 <p style="font-size: 80%;">We suggest paying with MobilePay:
 
@@ -39,7 +39,7 @@ window.addEventListener('load', () => {
 
 <p>
   <a href="https://buy.stripe.com/fZe3d8dc21xqdBm6or"><img src="assets/visa.svg?v={{ get_hash(path='static/assets/visa.svg', sha_type=256) | slugify }}" height="60px"></a>&nbsp;
-  <a href="https://www.paypal.me/HelsinkiSBK/10" target="_blank"><img src="assets/paypal.svg?v={{ get_hash(path='static/assets/paypal.svg', sha_type=256) | slugify }}" height="60px"></a>&nbsp;
+  <a href="https://www.paypal.me/HelsinkiSBK/3" target="_blank"><img src="assets/paypal.svg?v={{ get_hash(path='static/assets/paypal.svg', sha_type=256) | slugify }}" height="60px"></a>&nbsp;
   <a href="https://myedenred.fi/affiliate-payment/42a3d20c-4a9d-43e6-aa2f-0db207503b88" target="_blank"><img src="assets/edenred.svg?v={{ get_hash(path='static/assets/edenred.svg', sha_type=256) | slugify }}" height="60px"></a>&nbsp;
   <a onclick="handleAppClick('ePassi', 'ePassi')"><img src="assets/epassi.svg?v={{ get_hash(path='static/assets/epassi.svg', sha_type=256) | slugify }}" height="60px"></a>&nbsp;
   <a onclick="handleAppClick('Smartum', 'SmartumPay')"><img src="assets/smartum.svg?v={{ get_hash(path='static/assets/smartum.svg', sha_type=256) | slugify }}" height="60px"></a>

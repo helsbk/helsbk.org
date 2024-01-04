@@ -1,6 +1,6 @@
 /* extra */
 @font-face {
-  font-family: 'Inter var';
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
@@ -10,7 +10,7 @@
 }
 /* alternates */
 @font-face {
-  font-family: 'Inter var';
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
@@ -20,7 +20,7 @@
 }
 /* symbols */
 @font-face {
-  font-family: 'Inter var';
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
@@ -30,7 +30,7 @@
 }
 /* cyrillic */
 @font-face {
-  font-family: 'Inter var';
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
@@ -40,7 +40,7 @@
 }
 /* greek */
 @font-face {
-  font-family: 'Inter var';
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
@@ -50,7 +50,7 @@
 }
 /* latin-ext */
 @font-face {
-  font-family: 'Inter var';
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
@@ -60,7 +60,7 @@
 }
 /* latin */
 @font-face {
-  font-family: 'Inter var';
+  font-family: 'Inter';
   font-style: normal;
   font-weight: 100 900;
   font-display: swap;
@@ -76,7 +76,7 @@
 }
 
 body {
-  font-family: 'Inter var', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 18px;
   background-color: #000;
   color: #ddd;

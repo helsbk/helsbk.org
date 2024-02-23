@@ -7,20 +7,9 @@
 }
 </style>
 <script type="text/javascript">
-function handleMobilePayClick() {
-  navigator.clipboard.writeText('0402403791');
-  location.href = 'mobilepay://';
-}
-
 function handleAppClick(service, app) {
   alert(`To pay with ${service}, open the ${app} app and search for "Helsinki SBK"`);
 }
-
-window.addEventListener('load', () => {
-  document.getElementById('mobilepay-number').addEventListener('copy', () => {
-    location.href = 'mobilepay://';
-  }, { once: true });
-});
 </script>
 {% endblock head %}
 
@@ -28,14 +17,14 @@ window.addEventListener('load', () => {
 
 <h3>Entrance Fee Payment</h3>
 
-<p><b>10€</b> entrance fee<br>
+<p style="line-height: 130%;"><b>10€</b> entrance fee<br>
    <b>+4€</b> open level urbankiz class<br>
    <b>+1€</b> open level bachata class<br>
    <b>+4€</b> int/adv bachata class<br>
 
-<p>We suggest paying with MobilePay. Search for "SBK" or use our number:
+<p style="color: #fff"><b>We suggest paying with MobilePay.</b> Search for <b>SBK</b> in the app or use our number:
 
-<p><img src="assets/mobilepay.svg?v={{ get_hash(path='static/assets/mobilepay.svg', sha_type=256) | slugify }}" height="60px" onclick="handleMobilePayClick()"> <span id="mobilepay-number" style="font-size: 25px; line-height: 35px; user-select: text; display: inline-block; vertical-align: middle; height: 80px;"><b>→ 10019</b></span>
+<p><img src="assets/mobilepay.svg?v={{ get_hash(path='static/assets/mobilepay.svg', sha_type=256) | slugify }}" height="60px"> <span style="font-size: 25px; line-height: 10px; user-select: text; display: inline-block; vertical-align: middle; height: 60px;"><b>→ 10019</b></span>
 
 <p>Other payment options:
 

@@ -28,14 +28,16 @@ window.addEventListener('load', () => {
 
 <h3>Entrance Fee Payment</h3>
 
-<p style="font-size: 90%;"><b>10€</b> social only<br>
-   <b>+1€</b> open level bachata class<br>
+<p><b>10€</b> entrance fee<br>
    <b>+4€</b> open level urbankiz class<br>
+   <b>+1€</b> open level bachata class<br>
    <b>+4€</b> int/adv bachata class<br>
 
-<p style="font-size: 90%;">We suggest paying with MobilePay. Search for "SBK" or use our number:
+<p>We suggest paying with MobilePay. Search for "SBK" or use our number:
 
-<p><img src="assets/mobilepay.svg?v={{ get_hash(path='static/assets/mobilepay.svg', sha_type=256) | slugify }}" height="50px" onclick="handleMobilePayClick()"> <span id="mobilepay-number" style="user-select: text; display: inline-block; vertical-align: middle; height: 60px;"><b>→ 10019</b></span>
+<p><img src="assets/mobilepay.svg?v={{ get_hash(path='static/assets/mobilepay.svg', sha_type=256) | slugify }}" height="60px" onclick="handleMobilePayClick()"> <span id="mobilepay-number" style="font-size: 25px; line-height: 35px; user-select: text; display: inline-block; vertical-align: middle; height: 80px;"><b>→ 10019</b></span>
+
+<p>Other payment options:
 
 <p>
   <a href="https://pay.sumup.com/b2c/QZC97WQE"><img src="assets/visa.svg?v={{ get_hash(path='static/assets/visa.svg', sha_type=256) | slugify }}" height="60px"></a>&nbsp;

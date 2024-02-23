@@ -26,14 +26,14 @@ window.addEventListener('load', () => {
 
 {% block content %}
 
-<h3>Entrance Payment</h3>
+<h3>Entrance Fee Payment</h3>
 
 <p style="font-size: 80%;">We suggest paying with MobilePay. Search for "SBK" in the app or use our number:
 
 <p><img src="assets/mobilepay.svg?v={{ get_hash(path='static/assets/mobilepay.svg', sha_type=256) | slugify }}" height="50px" onclick="handleMobilePayClick()"> <span id="mobilepay-number" style="user-select: text; display: inline-block; vertical-align: middle; height: 60px;"><b>→ 10019</b></span>
 
 <p>
-  <a href="https://buy.stripe.com/dR61506NE0tm40MeVp"><img src="assets/visa.svg?v={{ get_hash(path='static/assets/visa.svg', sha_type=256) | slugify }}" height="60px"></a>&nbsp;
+  <a href="https://pay.sumup.com/b2c/QZC97WQE"><img src="assets/visa.svg?v={{ get_hash(path='static/assets/visa.svg', sha_type=256) | slugify }}" height="60px"></a>&nbsp;
   <a href="https://www.paypal.me/HelsinkiSBK" target="_blank"><img src="assets/paypal.svg?v={{ get_hash(path='static/assets/paypal.svg', sha_type=256) | slugify }}" height="60px"></a>&nbsp;
   <a href="https://myedenred.fi/affiliate-payment/42a3d20c-4a9d-43e6-aa2f-0db207503b88" target="_blank"><img src="assets/edenred.svg?v={{ get_hash(path='static/assets/edenred.svg', sha_type=256) | slugify }}" height="60px"></a>&nbsp;
   <a onclick="handleAppClick('ePassi', 'ePassi')"><img src="assets/epassi.svg?v={{ get_hash(path='static/assets/epassi.svg', sha_type=256) | slugify }}" height="60px"></a>&nbsp;

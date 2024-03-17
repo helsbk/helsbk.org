@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://www.facebook.com/events/3637774106505419/",
+    "date": "Tue 19.3.",
+    "start": "20:15",
+    "end": "22:45",
+    "location": "Jazz Factory",
+    "styles": [
+      "bachata"
+    ],
+    "price": "💶 5€ entrance fee. 1€ discount if you are marked ☑️ Going in the Facebook event."
+  },
+  {
+    "url": "https://www.facebook.com/events/7202422553177272/",
+    "date": "Fri 22.3.",
+    "start": "19:00",
+    "end": "22:00",
+    "location": "Helsinki Dance Central",
+    "styles": [
+      "bachata",
+      "urbankiz",
+      "salsa"
+    ],
+    "price": "🔹 10€ for social only\n🔹 15€ for social + 1 workshop\n🔹 20€ for social + 2 workshops"
+  }
+]

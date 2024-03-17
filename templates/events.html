@@ -23,23 +23,22 @@
 
 {% block content %}
 
-<a href="https://www.facebook.com/events/3637774106505419/" target="_blank" class="event-container">
-  <div class="event-title"><b>Tue 19.3.</b> 20:15 - 22:45</div>
-  <div class="event-location"><span class="event-organizer">Jazz Factory</span></div>
-  <div class="dance-styles">
-    <div class="b">bachata</div>
-  </div>
-</a>
-
-<a href="https://www.facebook.com/events/7202422553177272/" target="_blank" class="event-container">
-  <div class="event-title"><b>Fri 22.3.</b> 19:00 - 22:00</div>
-  <div class="event-location"><span class="event-organizer">Helsinki Dance Central</span></div>
-  <div class="dance-styles">
-    <div class="b">bachata</div>
-    <div class="s">salsa</div>
-    <div class="k">urbankiz</div>
-  </div>
-</a>
-
+{% set events = load_data(path="content/events.json") %}
+{% if events %}
+  {% for event in events %}
+    <a href="{{ event.url }}" target="_blank" class="event-container">
+      <div class="event-title"><b>{{ event.date }}</b> {{ event.start }} - {{ event.end }}</div>
+      <div class="event-location">{{ event.location }}</div>
+      <div class="dance-styles">
+        {% if "bachata" in event.styles %}<div class="b">bachata</div>{% endif %}
+        {% if "salsa" in event.styles %}<div class="s">salsa</div>{% endif %}
+        {% if "kizomba" in event.styles %}<div class="k">kizomba</div>{% endif %}
+        {% if "urbankiz" in event.styles %}<div class="k">urbankiz</div>{% endif %}
+      </div>
+    </a>
+  {% endfor %}
+{% else %}
+  <p>No events scheduled. Check back tomorrow!</p>
+{% endif %}
 
 {% endblock content %}

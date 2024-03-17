@@ -17,6 +17,11 @@ function handleAppClick(service, app) {
 
 <h3>Entrance Fee Payment</h3>
 
+{% set firstEvent = load_data(path="content/events.json") | first %}
+{% if firstEvent %}
+  {{ firstEvent.price | linebreaksbr | markdown | safe }}
+{% endif %}
+
 <p style="color: #fff"><b>We suggest paying with MobilePay.</b> Search for <b>SBK</b> in the app or use our number:
 
 <p><img src="assets/mobilepay.svg?v={{ get_hash(path='static/assets/mobilepay.svg', sha_type=256) | slugify }}" height="60px"> <span style="font-size: 25px; line-height: 10px; user-select: text; display: inline-block; vertical-align: middle; height: 60px;"><b>→ 10019</b></span>

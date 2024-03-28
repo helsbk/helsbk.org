@@ -1,5 +1,16 @@
 [
   {
+    "url": "https://www.facebook.com/events/392831270128758/",
+    "date": "Thu 28.3.",
+    "start": "20:15",
+    "end": "23:45",
+    "location": "Jazz Factory",
+    "styles": [
+      "bachata"
+    ],
+    "price": "🔹 5€ normal price\n🔹 4€ discounted price if you are marked ☑️ Going in the Facebook event 2 hours in advance"
+  },
+  {
     "url": "https://www.facebook.com/events/329171950139514/",
     "date": "Fri 12.4.",
     "start": "20:00",
@@ -10,16 +21,5 @@
       "urbankiz"
     ],
     "price": "🔹 10€ for social\n🔹 2€ for pre-party class\n✅ 1€ discount if you are marked ☑️ Going in the Facebook event 2 hours in advance"
-  },
-  {
-    "url": "https://www.facebook.com/events/392831270128758/",
-    "date": "Thu 28.3.",
-    "start": "20:15",
-    "end": "23:45",
-    "location": "Jazz Factory",
-    "styles": [
-      "bachata"
-    ],
-    "price": "🔹 5€ normal price\n🔹 4€ discounted price if you are marked ☑️ Going in the Facebook event 2 hours in advance"
   }
 ]

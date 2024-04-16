@@ -11,6 +11,17 @@
     "price": "🔹 5€ normal price\n🔹 4€ discounted price if you are marked ☑️ Going in the Facebook event 2 hours in advance"
   },
   {
+    "url": "https://www.facebook.com/events/741317988157256/",
+    "date": "Tue 23.4.",
+    "start": "20:10",
+    "end": "22:40",
+    "location": "Jazz Factory",
+    "styles": [
+      "bachata"
+    ],
+    "price": "🔹 5€ for social"
+  },
+  {
     "url": "https://www.facebook.com/events/948424919926584/",
     "date": "Fri 10.5.",
     "start": "21:15",

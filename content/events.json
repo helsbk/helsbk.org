@@ -31,5 +31,16 @@
       "urbankiz"
     ],
     "price": "🔹 10€ for social"
+  },
+  {
+    "url": "https://www.facebook.com/events/812422340781005/",
+    "date": "Fri 31.5.",
+    "start": "19:15",
+    "end": "01:00",
+    "location": "Helsinki Dance Central",
+    "styles": [
+      "bachata"
+    ],
+    "price": "🔹 5€ for social\n🔹 20€ for class + social"
   }
 ]

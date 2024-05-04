@@ -1,16 +1,5 @@
 [
   {
-    "url": "https://www.facebook.com/events/446100157903156/",
-    "date": "Fri 3.5.",
-    "start": "20:00",
-    "end": "01:15",
-    "location": "Helsinki Dance Central",
-    "styles": [
-      "bachata"
-    ],
-    "price": "🔹 1€ discount on prices if you are marked ☑️ Going in Facebook before event starts ✨\n🔹 8€ for social\n🔹 15€ for class + social"
-  },
-  {
     "url": "https://www.facebook.com/events/967121968481746/",
     "date": "Sat 4.5.",
     "start": "15:00",
@@ -39,7 +28,8 @@
     "end": "01:00",
     "location": "Helsinki Dance Central",
     "styles": [
-      "bachata"
+      "bachata",
+      "urbankiz"
     ],
     "price": "🔹 5€ for social\n🔹 20€ for class + social"
   }

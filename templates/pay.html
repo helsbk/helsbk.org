@@ -16,10 +16,12 @@ function handleAppClick(service, app) {
 {% block content %}
 
 {% set event = load_data(path="content/events.json") | first %}
-{% if event %}
+{% if event and event.price %}
   <h3>{{ event.date }} Entrance Fee</h3>
 
   {{ event.price | linebreaksbr | markdown | safe }}
+{% else %}
+  <h3>Entrance Fee</h3>
 {% endif %}
 
 <p>We suggest using MobilePay (10019) 🙏

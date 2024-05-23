@@ -1,0 +1,34 @@
+{% extends "_content.html" %}
+
+{% block head %}
+<style type="text/css">
+#options div {
+  padding-bottom: 10px;
+}
+</style>
+<script type="text/javascript">
+function handleAppClick(service, app) {
+  alert(`To pay with ${service}, open the ${app} app and search for "Helsinki SBK"`);
+}
+</script>
+{% endblock head %}
+
+{% block content %}
+<h3>2024 Annual Membership & Summer Pass (20€)</h3>
+
+<p>Our summer outdoor events are free. If you attend more than 5 of our events this summer, we would appreciate the payment of the annual membership (20€) for our non-profit association <a href="https://hbry.fi" target="_blank" style="color: #FFF;">Helsinki Bachateando ry</a> 💛
+
+<p>The membership fee will help us cover expenses from our summer events. You will also get 50% off from our summer outdoor dance classes.
+
+<p>We suggest using MobilePay (10019) to pay! 🌼
+
+<p>
+  <a href="https://qr.mobilepay.fi/28/2/05/031/w95Bcn3-p"><img src="assets/mobilepay.svg?v={{ get_hash(path='static/assets/mobilepay.svg', sha_type=256) | slugify }}" height="80px"></a>&nbsp;&nbsp;&nbsp;
+  <a href="https://pay.sumup.com/b2c/QZUJWATC"><img src="assets/visa.svg?v={{ get_hash(path='static/assets/visa.svg', sha_type=256) | slugify }}" height="80px"></a>&nbsp;&nbsp;&nbsp;
+  <a href="https://www.paypal.me/HelsinkiSBK/20" target="_blank"><img src="assets/paypal.svg?v={{ get_hash(path='static/assets/paypal.svg', sha_type=256) | slugify }}" height="80px"></a>
+
+<p>
+  <a href="https://myedenred.fi/affiliate-payment/42a3d20c-4a9d-43e6-aa2f-0db207503b88" target="_blank"><img src="assets/edenred.svg?v={{ get_hash(path='static/assets/edenred.svg', sha_type=256) | slugify }}" height="80px"></a>&nbsp;&nbsp;&nbsp;
+  <a onclick="handleAppClick('ePassi', 'ePassi')"><img src="assets/epassi.svg?v={{ get_hash(path='static/assets/epassi.svg', sha_type=256) | slugify }}" height="80px"></a>&nbsp;&nbsp;&nbsp;
+  <a onclick="handleAppClick('Smartum', 'SmartumPay')"><img src="assets/smartum.svg?v={{ get_hash(path='static/assets/smartum.svg', sha_type=256) | slugify }}" height="80px"></a>
+{% endblock content %}

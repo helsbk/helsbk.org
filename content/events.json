@@ -2,8 +2,19 @@
   {
     "url": "https://www.facebook.com/events/1025884381817352/",
     "date": "Fri 2.8.",
-    "start": "18:30",
+    "start": "19:15",
     "end": "01:00",
+    "location": "Helsinki Dance Central",
+    "styles": [
+      "bachata"
+    ],
+    "price": "🔹 5€ for social\n🔹 8€ for class + social"
+  },
+  {
+    "url": "https://www.facebook.com/events/412833911787280/",
+    "date": "Tue 6.8.",
+    "start": "18:45",
+    "end": "23:30",
     "location": "Oopperan amfiteatteri",
     "styles": [
       "bachata"

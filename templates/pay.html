@@ -14,10 +14,15 @@ function handleAppClick(service, app) {
 {% endblock head %}
 
 {% block content %}
-<h3>Outdoor Class</h3>
 
-<p>🔹 8€ for members (<a href="/membership">more info</a>)
-<p>🔹 10€ for non-members
+{% set event = load_data(path="content/events.json") | first %}
+{% if event and event.price %}
+  <h3>{{ event.date }} Entrance Fee</h3>
+
+  {{ event.price | linebreaksbr | markdown | safe }}
+{% else %}
+  <h3>Entrance Fee</h3>
+{% endif %}
 
 <p>We suggest using MobilePay (10019) 🙏
 

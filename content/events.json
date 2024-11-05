@@ -1,5 +1,15 @@
 [
   {
+    "url": "https://www.facebook.com/events/1250555799325652/",
+    "date": "Tue 12.11.",
+    "start": "20:30",
+    "end": "23:00",
+    "location": "Helsinki Dance Central",
+    "styles": [
+      "bachata"
+    ]
+  },
+  {
     "url": "https://www.facebook.com/events/3774217459534135/",
     "date": "Fri 15.11.",
     "start": "18:45",
@@ -7,6 +17,7 @@
     "location": "Helsinki Dance Central",
     "styles": [
       "bachata",
+      "kizomba",
       "urbankiz"
     ],
     "price": "🔹 10€ for social\n🔹 20€ for social + 2h workshop for individual\n🔹 35€ for social + 2h workshop for couple"

@@ -47,6 +47,29 @@
     "price": "🔹 10€ for social\n🔹 15€ for social + workshop"
   },
   {
+    "url": "https://www.facebook.com/events/1047712720369677/",
+    "date": "Fri 20.12.",
+    "start": "19:15",
+    "end": "01:30",
+    "location": "Helsinki Dance Central",
+    "styles": [
+      "bachata",
+      "kizomba",
+      "urbankiz"
+    ]
+  },
+  {
+    "url": "https://www.facebook.com/events/1353971135567240/",
+    "date": "Sat 28.12.",
+    "start": "19:15",
+    "end": "01:30",
+    "location": "Helsinki Dance Central",
+    "styles": [
+      "bachata",
+      "urbankiz"
+    ]
+  },
+  {
     "url": "https://www.facebook.com/events/2327054694325192/",
     "date": "Sat 4.1.",
     "start": "13:00",
@@ -57,5 +80,16 @@
       "urbankiz"
     ],
     "price": "🔹 39€/person for couple full pass (4h of workshops + 2 socials)\n🔹 45€ for individual full pass\n🔹 16€ for Sat social + pre-party class\n🔹 10€ for Sat social"
+  },
+  {
+    "url": "https://www.facebook.com/events/489547677446608/",
+    "date": "Sat 1.2.",
+    "start": "19:15",
+    "end": "01:30",
+    "location": "Bachata Helsinki",
+    "styles": [
+      "bachata",
+      "urbankiz"
+    ]
   }
 ]

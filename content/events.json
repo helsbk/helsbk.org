@@ -11,18 +11,6 @@
     "price": "🔹 8€ for social online in advance\n🔹 9€ for social at the door"
   },
   {
-    "url": "https://www.facebook.com/events/2733845426793303/",
-    "date": "Fri 13.12.",
-    "start": "19:45",
-    "end": "02:00",
-    "location": "Helsinki Dance Central",
-    "styles": [
-      "bachata",
-      "urbankiz"
-    ],
-    "price": "🔹 10€ for social\n🔹 15€ for social + workshop"
-  },
-  {
     "url": "https://www.facebook.com/events/1047712720369677/",
     "date": "Fri 20.12.",
     "start": "19:15",
@@ -42,8 +30,10 @@
     "location": "Helsinki Dance Central",
     "styles": [
       "bachata",
-      "urbankiz"
-    ]
+      "urbankiz",
+      "salsa"
+    ],
+    "price": "🔹 9€ for social\n🔹 10€/person for social + class (couple pass)"
   },
   {
     "url": "https://www.facebook.com/events/578721574552280/",

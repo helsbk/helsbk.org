@@ -1,15 +1,26 @@
 [
   {
+    "url": "https://www.facebook.com/events/625997703094848/",
+    "date": "Tue 17.12.",
+    "start": "20:30",
+    "end": "23:00",
+    "location": "Helsinki Dance Central",
+    "styles": [
+      "bachata"
+    ]
+  },
+  {
     "url": "https://www.facebook.com/events/1047712720369677/",
     "date": "Fri 20.12.",
-    "start": "19:15",
-    "end": "01:30",
+    "start": "20:30",
+    "end": "02:00",
     "location": "Helsinki Dance Central",
     "styles": [
       "bachata",
       "kizomba",
       "urbankiz"
-    ]
+    ],
+    "price": "🔹 7€ for bachata social\n🔹 9€ for all room social"
   },
   {
     "url": "https://www.facebook.com/events/1353971135567240/",

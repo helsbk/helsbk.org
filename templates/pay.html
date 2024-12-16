@@ -24,8 +24,6 @@ function handleAppClick(service, app) {
   <h3>Pay social entrance fee</h3>
 {% endif %}
 
-<p>We suggest using MobilePay (10019) 🙏</p>
-
 <p>
   <a href="https://qr.mobilepay.fi/28/2/05/031/w95Bcn3-p"><img src="assets/mobilepay.svg?v={{ get_hash(path='static/assets/mobilepay.svg', sha_type=256) | slugify }}" height="80px"></a>&nbsp;&nbsp;&nbsp;
   <a href="https://pay.sumup.com/b2c/QZC97WQE"><img src="assets/visa.svg?v={{ get_hash(path='static/assets/visa.svg', sha_type=256) | slugify }}" height="80px"></a>&nbsp;&nbsp;&nbsp;
@@ -37,6 +35,6 @@ function handleAppClick(service, app) {
   <a onclick="handleAppClick('Smartum', 'SmartumPay')"><img src="assets/smartum.svg?v={{ get_hash(path='static/assets/smartum.svg', sha_type=256) | slugify }}" height="80px"></a>
 
 <br><br>
+<p><small>The payment is for <b>Helsinki Bachateando ry</b>, a non-profit bachata association. Your payment will be used to cover the expenses of this event and to organize more dance events. We appreciate your support! 🙏</small>
 
-<p style="color: #BBB; font-size: 80%;">The payment is for <a href="https://hbry.fi" target="_blank" style="color: #FFF;">Helsinki Bachateando ry</a>, a non-profit bachata association.
 {% endblock content %}

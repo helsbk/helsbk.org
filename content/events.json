@@ -1,116 +1,98 @@
 [
   {
+    "title": "Tuesday Practica — Free Bachata Social & Christmas Potluck",
     "url": "https://www.facebook.com/events/625997703094848/",
     "date": "Tue 17.12.",
     "start": "20:30",
     "end": "23:00",
     "location": "Helsinki Dance Central",
-    "styles": [
-      "bachata"
-    ]
+    "styles": []
   },
   {
+    "title": "Friday Social — Bachata • Urbankiz • Zouk",
     "url": "https://www.facebook.com/events/1047712720369677/",
     "date": "Fri 20.12.",
     "start": "20:30",
     "end": "02:00",
     "location": "Helsinki Dance Central",
-    "styles": [
-      "bachata",
-      "urbankiz"
-    ],
+    "styles": [],
     "price": "🔹 8€ for bachata room only social with MobilePay before Friday 15:00\n🔹 10€ for social in all rooms"
   },
   {
+    "title": "Monday Bachata Pre-Christmas Social",
     "url": "https://www.facebook.com/events/613657077843948/",
     "date": "Mon 23.12.",
     "start": "19:00",
     "end": "23:00",
     "location": "Bongos",
-    "styles": [
-      "bachata"
-    ],
+    "styles": [],
     "price": "🔹 7€ for social"
   },
   {
+    "title": "Thursday Bachata Post-Christmas Social",
     "url": "https://www.facebook.com/events/622738686856931/",
     "date": "Thu 26.12.",
     "start": "19:00",
     "end": "23:00",
     "location": "Bongos",
-    "styles": [
-      "bachata"
-    ],
+    "styles": [],
     "price": "🔹 7€ for social"
   },
   {
+    "title": "Saturday Social — Bachata • Urbankiz • Cuban Salsa",
     "url": "https://www.facebook.com/events/1353971135567240/",
     "date": "Sat 28.12.",
     "start": "19:15",
     "end": "01:30",
     "location": "Helsinki Dance Central",
-    "styles": [
-      "bachata",
-      "urbankiz",
-      "salsa"
-    ],
+    "styles": [],
     "price": "🔹 10€ for social\n🔹 14€ for social + class"
   },
   {
+    "title": "Bachata New Year Party",
     "url": "https://www.facebook.com/events/578721574552280/",
     "date": "Tue 31.12.",
     "start": "21:00",
     "end": "03:00",
     "location": "Skillz Gym taitoliikuntahalli",
-    "styles": [
-      "bachata"
-    ],
+    "styles": [],
     "price": "🔹 7€ for party\n🔹 9€ for party + sparkling wine"
   },
   {
+    "title": "Saturday Social with Tonio — Bachata • Urbankiz • Zouk",
     "url": "https://www.facebook.com/events/2327054694325192/",
     "date": "Sat 4.1.",
     "start": "13:00",
     "end": "02:00",
     "location": "Helsinki Dance Central",
-    "styles": [
-      "bachata",
-      "urbankiz"
-    ],
+    "styles": [],
     "price": "🔹 39€/person for couple full pass (4h of workshops + 2 socials)\n🔹 45€ for individual full pass\n🔹 16€ for Sat social + pre-party class\n🔹 10€ for Sat social"
   },
   {
+    "title": "Saturday Social — Bachata • Urbankiz • Kizomba/Semba",
     "url": "https://www.facebook.com/events/887006626975927/",
     "date": "Sat 11.1.",
     "start": "19:15",
     "end": "02:00",
     "location": "Helsinki Dance Central",
-    "styles": [
-      "bachata",
-      "kizomba",
-      "urbankiz"
-    ]
+    "styles": []
   },
   {
+    "title": "Saturday Social — Bachata • Urbankiz",
     "url": "https://www.facebook.com/events/604884081866964/",
     "date": "Sat 22.2.",
     "start": "19:15",
     "end": "01:30",
     "location": "Helsinki Dance Central",
-    "styles": [
-      "bachata",
-      "urbankiz"
-    ]
+    "styles": []
   },
   {
+    "title": "Saturday Social with Artists — Bachata • Urbankiz",
     "url": "https://www.facebook.com/events/529773483165549/",
     "date": "Sat 1.3.",
     "start": "18:00",
     "end": "02:00",
     "location": "Helsinki Dance Central",
-    "styles": [
-      "bachata",
-      "urbankiz"
-    ]
+    "styles": []
   }
 ]

@@ -1,56 +1,30 @@
 {% extends "_content.html" %}
 
 {% block content %}
-<p>Helsinki SBK organizes non-profit salsa, bachata, and kizomba social dance parties & weekend events in Helsinki.
+<section id="nav">
+  <p class="grid">
+    <button onclick="location.href = '/pay'"><svg width="28" height="28" fill="#fff" viewBox="0 0 256 256"><path d="M224,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48Zm0,16V88H32V64Zm0,128H32V104H224v88Zm-16-24a8,8,0,0,1-8,8H168a8,8,0,0,1,0-16h32A8,8,0,0,1,208,168Zm-64,0a8,8,0,0,1-8,8H120a8,8,0,0,1,0-16h16A8,8,0,0,1,144,168Z"></path></svg> Payment</button>
+    <button class="secondary" onclick="location.href = 'https://www.facebook.com/HelSBK'"><svg width="28" height="28" fill="#fff" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path></svg> Facebook</button>
+    <button class="secondary" onclick="location.href = 'https://www.instagram.com/helsbk'"><svg width="28" height="28" fill="#fff" viewBox="0 0 256 256"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path></svg> Instagram</button>
+  </p>
+  <br>
+</section>
 
-<h4>Socials</h4>
-
-<div class="button-container">
-  <a href="/events">
-  <div class="button-icon">
-    <svg width="28" height="28" fill="#fff" viewBox="0 0 256 256"><path d="M208,32H184V24a8,8,0,0,0-16,0v8H88V24a8,8,0,0,0-16,0v8H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM72,48v8a8,8,0,0,0,16,0V48h80v8a8,8,0,0,0,16,0V48h24V80H48V48ZM208,208H48V96H208V208Zm-96-88v64a8,8,0,0,1-16,0V132.94l-4.42,2.22a8,8,0,0,1-7.16-14.32l16-8A8,8,0,0,1,112,120Zm59.16,30.45L152,176h16a8,8,0,0,1,0,16H136a8,8,0,0,1-6.4-12.8l28.78-38.37A8,8,0,1,0,145.07,132a8,8,0,1,1-13.85-8A24,24,0,0,1,176,136,23.76,23.76,0,0,1,171.16,150.45Z"></path></svg>
-  </div>
-  <div class="button-text">Events</div>
-  </a>
-</div>
-
-<div class="button-container">
-  <a href="/pay">
-  <div class="button-icon">
-    <svg width="28" height="28" fill="#fff" viewBox="0 0 256 256"><path d="M224,48H32A16,16,0,0,0,16,64V192a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V64A16,16,0,0,0,224,48Zm0,16V88H32V64Zm0,128H32V104H224v88Zm-16-24a8,8,0,0,1-8,8H168a8,8,0,0,1,0-16h32A8,8,0,0,1,208,168Zm-64,0a8,8,0,0,1-8,8H120a8,8,0,0,1,0-16h16A8,8,0,0,1,144,168Z"></path></svg>
-  </div>
-  <div class="button-text">Pay</div>
-  </a>
-</div>
-
-<div class="button-container">
-  <a href="/info">
-  <div class="button-icon">
-    <svg width="28" height="28" fill="#fff" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm16-40a8,8,0,0,1-8,8,16,16,0,0,1-16-16V128a8,8,0,0,1,0-16,16,16,0,0,1,16,16v40A8,8,0,0,1,144,176ZM112,84a12,12,0,1,1,12,12A12,12,0,0,1,112,84Z"></path></svg>
-  </div>
-  <div class="button-text">Info</div>
-  </a>
-</div>
-
-<h4>Contact</h4>
-
-<div class="button-container">
-  <a href="https://www.facebook.com/HelSBK" target="_blank">
-  <div class="button-icon">
-    <svg width="28" height="28" fill="#fff" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path></svg>
-  </div>
-  <div class="button-text">Facebook</div>
-  </a>
-</div>
-
-<div class="button-container">
-  <a href="https://www.instagram.com/helsbk/" target="_blank">
-  <div class="button-icon">
-    <svg width="28" height="28" fill="#fff" viewBox="0 0 256 256"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"></path></svg>
-  </div>
-  <div class="button-text">Instagram</div>
-  </a>
-</div>
-
-
+<section id="events">
+  <h2>Upcoming events</h2>
+  {% set events = load_data(path="content/events.json") %}
+  {% if events %}
+    {% for event in events %}
+      <article>
+        <a href="{{ event.url }}" target="_blank" style="text-decoration: none">{{ event.title }}</a><br>
+        <b>{{ event.date }}</b> {{ event.start }} - {{ event.end }} at <a class="secondary" style="text-decoration: none">{{ event.location }}</a>
+      </article>
+    {% endfor %}
+  {% endif %}
+</section>
+<br>
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Feel free to email us: contact (ät) helsbk.org
+</section>
 {% endblock content %}

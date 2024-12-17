@@ -19,7 +19,7 @@
     {% for event in events %}
       <article>
         <a href="{{ event.url }}" target="_blank" style="text-decoration: none">{{ event.title }}</a><br>
-        <b>{{ event.date }}</b> {{ event.start }} - {{ event.end }} at <a class="secondary" style="text-decoration: none">{{ event.location }}</a>
+        <b>{{ event.date }}</b> {{ event.start }} - {{ event.end }}<br><a class="secondary" style="text-decoration: none">{{ event.location }}</a>
       </article>
     {% endfor %}
   {% endif %}

@@ -7,8 +7,8 @@
 }
 </style>
 <script type="text/javascript">
-function handleAppClick(service, app) {
-  alert(`To pay with ${service}, open the ${app} app and search for "Helsinki SBK"`);
+function handleEpassiClick() {
+  alert(`To pay with Epassi, open the Epassi app and search for "Helsinki SBK"`);
 }
 </script>
 {% endblock head %}
@@ -29,8 +29,7 @@ function handleAppClick(service, app) {
   <a href="https://pay.sumup.com/b2c/QZC97WQE"><button class="secondary contrast"><img src="assets/visa.svg?v={{ get_hash(path='static/assets/visa.svg', sha_type=256) | slugify }}" height="80px"></button></a>
   <a href="https://www.paypal.me/HelsinkiSBK" target="_blank"><button class="secondary contrast"><img src="assets/paypal.svg?v={{ get_hash(path='static/assets/paypal.svg', sha_type=256) | slugify }}" height="80px"></button></a>
   <a href="https://myedenred.fi/affiliate-payment/42a3d20c-4a9d-43e6-aa2f-0db207503b88" target="_blank"><button class="secondary contrast"><img src="assets/edenred.svg?v={{ get_hash(path='static/assets/edenred.svg', sha_type=256) | slugify }}" height="80px"></button></a>
-  <a onclick="handleAppClick('ePassi', 'ePassi')"><button class="secondary contrast"><img src="assets/epassi.svg?v={{ get_hash(path='static/assets/epassi.svg', sha_type=256) | slugify }}" height="80px"></button></a>
-  <a onclick="handleAppClick('Smartum', 'SmartumPay')"><button class="secondary contrast"><img src="assets/smartum.svg?v={{ get_hash(path='static/assets/smartum.svg', sha_type=256) | slugify }}" height="80px"></button></a>
+  <a onclick="handleEpassiClick()"><button class="secondary contrast"><img src="assets/epassi.svg?v={{ get_hash(path='static/assets/epassi.svg', sha_type=256) | slugify }}" height="80px"></button></a>
 </p>
 
 <br>

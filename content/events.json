@@ -1,13 +1,5 @@
 [
   {
-    "title": "Bachata Sunday Outdoor Social",
-    "url": "https://www.facebook.com/events/4324049767822458/",
-    "date": "Sun 1.6.",
-    "start": "17:00",
-    "end": "21:00",
-    "location": "Designmuseon tapahtumalava"
-  },
-  {
     "title": "Bachata Sauna Festival 2025",
     "url": "https://www.facebook.com/events/476461991951843/",
     "date": "Thu 5.6.",
@@ -21,6 +13,14 @@
     "date": "Fri 6.6.",
     "start": "19:30",
     "end": "00:00",
+    "location": "Oranssi ry"
+  },
+  {
+    "title": "Urbankiz Social — Bachata Sauna Festival",
+    "url": "https://www.facebook.com/events/1210569987206094/",
+    "date": "Sat 7.6.",
+    "start": "19:30",
+    "end": "23:30",
     "location": "Oranssi ry"
   }
 ]
